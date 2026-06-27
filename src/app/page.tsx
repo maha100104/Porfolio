@@ -26,7 +26,7 @@ const projects: Project[] = [
     title: 'Modern Developer Portfolio',
     category: 'Personal Projects',
     description: 'A highly interactive developer portfolio built to showcase personal projects, professional experience, and technical skills.',
-    githubUrl: 'https://porfolio-maha100104.vercel.app/',
+    githubUrl: 'https://portfolio-maha100104.vercel.app/',
     icon: '✨',
     bgGradient: 'from-pink-500/20 to-rose-400/20',
     bullets: [
