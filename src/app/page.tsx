@@ -9,7 +9,7 @@ import MahaAvatar from './assests/maha.jpg';
 import DigitalClockLogo from './assests/Digital Clock.png';
 import PupCartLogo from './assests/PupCart.png';
 import TravelLogo from './assests/travel.png';
-
+import PortfolioImg from './assests/Portfolio.png';
 interface Project {
   title: string;
   category: 'Professional Projects' | 'Personal Projects';
@@ -22,6 +22,20 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: 'Modern Developer Portfolio',
+    category: 'Personal Projects',
+    description: 'A highly interactive developer portfolio built to showcase personal projects, professional experience, and technical skills.',
+    githubUrl: 'https://porfolio-six-green.vercel.app/',
+    icon: '✨',
+    bgGradient: 'from-pink-500/20 to-rose-400/20',
+    bullets: [
+      'Next.js • React • Tailwind CSS • TypeScript',
+      '✔ Sleek, modern UI with smooth animations',
+      '✔ Fully responsive & interactive design'
+    ],
+    image: PortfolioImg.src
+  },
   {
     title: 'PupCart — Pet E-commerce Website',
     category: 'Personal Projects',
@@ -44,7 +58,7 @@ const projects: Project[] = [
     icon: '✈️',
     bgGradient: 'from-sky-500/20 to-cyan-400/20',
     bullets: [
-      'HTML • CSS • JavaScript',
+      'HTML • CSS',
       '✔ Elegant scroll interactions',
       '✔ Rich modern visual hierarchy'
     ],
