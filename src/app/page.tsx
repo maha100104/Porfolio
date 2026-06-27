@@ -22,6 +22,63 @@ interface Project {
 }
 
 const projects: Project[] = [
+
+  {
+    title: 'AiPod (Dental Application)',
+    category: 'Professional Projects',
+    description: 'Built a dental app allowing patients to securely upload photos/X-rays of their teeth for doctor review and automatic diagnosis generation.',
+    githubUrl: '#',
+    icon: '🦷',
+    bgGradient: 'from-blue-500/20 to-indigo-500/20',
+    bullets: [
+      'React • NestJS • TypeORM',
+      '✔ Secure image upload',
+      '✔ REST APIs',
+      '✔ Patient workflow'
+    ]
+  },
+  {
+    title: 'Leo Muthu Scholarship (LMS) Portal',
+    category: 'Professional Projects',
+    description: 'Developed a full-stack scholarship portal where students apply online and staff verify details before releasing funds.',
+    githubUrl: '#',
+    icon: '🎓',
+    bgGradient: 'from-amber-500/20 to-orange-500/20',
+    bullets: [
+      'React Native • NestJS • Drizzle ORM',
+      '✔ Multi-step application workflow',
+      '✔ Aadhaar & OTP verification',
+      '✔ Real-time status tracking'
+    ]
+  },
+  {
+    title: 'Aram Foundation Donation App',
+    category: 'Professional Projects',
+    description: 'Create a secure user-friendly donation platform with a custom admin dashboard for field control without writing code.',
+    githubUrl: '#',
+    icon: '🤝',
+    bgGradient: 'from-emerald-500/20 to-teal-500/20',
+    bullets: [
+      'React Native • NestJS • Drizzle ORM',
+      '✔ Secure payment processing',
+      '✔ Dynamic admin dashboard',
+      '✔ Real-time fund tracking'
+    ]
+  },
+  {
+    title: 'IQAC Event Scheduling System',
+    category: 'Professional Projects',
+    description: 'Centralized exam/event scheduling system with automated conflict-prevention algorithms.',
+    githubUrl: '#',
+    icon: '📅',
+    bgGradient: 'from-purple-500/20 to-pink-500/20',
+    bullets: [
+      'React • Vite • NestJS • Drizzle ORM',
+      '✔ Conflict-prevention algorithms',
+      '✔ Centralized exam scheduling',
+      '✔ Automated notifications'
+    ]
+  },
   {
     title: 'Modern Developer Portfolio',
     category: 'Personal Projects',
@@ -78,91 +135,12 @@ const projects: Project[] = [
     ],
     image: DigitalClockLogo.src
   },
-  {
-    title: 'AiPod (Dental Application)',
-    category: 'Professional Projects',
-    description: 'Built a dental app allowing patients to securely upload photos/X-rays of their teeth for doctor review and automatic diagnosis generation.',
-    githubUrl: '#',
-    icon: '🦷',
-    bgGradient: 'from-blue-500/20 to-indigo-500/20',
-    bullets: [
-      'React • NestJS • TypeORM',
-      '✔ Secure image upload',
-      '✔ REST APIs',
-      '✔ Patient workflow'
-    ]
-  },
-  {
-    title: 'Leo Muthu Scholarship (LMS) Portal',
-    category: 'Professional Projects',
-    description: 'Developed a full-stack scholarship portal where students apply online and staff verify details before releasing funds.',
-    githubUrl: '#',
-    icon: '🎓',
-    bgGradient: 'from-amber-500/20 to-orange-500/20',
-    bullets: [
-      'React Native • NestJS • Drizzle ORM',
-      '✔ Multi-step application workflow',
-      '✔ Aadhaar & OTP verification',
-      '✔ Real-time status tracking'
-    ]
-  },
-  {
-    title: 'Aram Foundation Donation App',
-    category: 'Professional Projects',
-    description: 'Create a secure user-friendly donation platform with a custom admin dashboard for field control without writing code.',
-    githubUrl: '#',
-    icon: '🤝',
-    bgGradient: 'from-emerald-500/20 to-teal-500/20',
-    bullets: [
-      'React Native • NestJS • Drizzle ORM',
-      '✔ Secure payment processing',
-      '✔ Dynamic admin dashboard',
-      '✔ Real-time fund tracking'
-    ]
-  },
-  {
-    title: 'IQAC Event Scheduling System',
-    category: 'Professional Projects',
-    description: 'Centralized exam/event scheduling system with automated conflict-prevention algorithms.',
-    githubUrl: '#',
-    icon: '📅',
-    bgGradient: 'from-purple-500/20 to-pink-500/20',
-    bullets: [
-      'React • Vite • NestJS • Drizzle ORM',
-      '✔ Conflict-prevention algorithms',
-      '✔ Centralized exam scheduling',
-      '✔ Automated notifications'
-    ]
-  }
 ];
 
-const blogPosts = [
-  {
-    title: 'Mastering React Native Performance',
-    category: 'Tutorials',
-    date: 'June 15, 2026',
-    description: 'Explore key strategies to optimize your React Native applications, from memory leak fixes to render profiling.',
-    image: '📱',
-  },
-  {
-    title: 'NestJS vs Express: Which to choose in 2026?',
-    category: 'Backend',
-    date: 'May 28, 2026',
-    description: 'A comprehensive comparison between Express and NestJS for building scale-ready backend architectures.',
-    image: '🛡️',
-  },
-  {
-    title: 'What is new in Tailwind CSS v4?',
-    category: 'Design',
-    date: 'April 10, 2026',
-    description: 'Deep dive into the CSS-first configuration, improved compiler speeds, and utility updates in Tailwind v4.',
-    image: '🎨',
-  },
-];
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'about' | 'resume' | 'portfolio'>('about');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('Professional Projects');
   const [copiedText, setCopiedText] = useState(false);
   const [avatarError, setAvatarError] = useState(false);
 
@@ -325,7 +303,7 @@ export default function Home() {
                 key={tab}
                 onClick={() => {
                   setActiveTab(tab);
-                  if (tab === 'portfolio') setSelectedCategory('Personal Projects');
+                  if (tab === 'portfolio') setSelectedCategory('Professional Projects');
                 }}
                 className={`font-semibold capitalize text-xs tracking-wider transition-colors cursor-pointer ${activeTab === tab ? 'text-[#ffdb70]' : 'text-gray-300 hover:text-gray-400'
                   }`}
@@ -342,7 +320,7 @@ export default function Home() {
                 key={tab}
                 onClick={() => {
                   setActiveTab(tab);
-                  if (tab === 'portfolio') setSelectedCategory('Personal Projects');
+                  if (tab === 'portfolio') setSelectedCategory('Professional Projects');
                 }}
                 className={`font-semibold capitalize text-[10px] sm:text-xs tracking-wider transition-colors cursor-pointer ${activeTab === tab ? 'text-[#ffdb70]' : 'text-gray-400 hover:text-gray-300'
                   }`}
