@@ -40,7 +40,7 @@ const projects: Project[] = [
     title: 'PupCart — Pet E-commerce Website',
     category: 'Personal Projects',
     description: 'A fully functional e-commerce website for pet products built with HTML, CSS and JavaScript.',
-    githubUrl: 'https://pup-cart-e-commerce-website-yb4s.vercel.app/',
+    githubUrl: 'https://pup-cart-e-commerce-website-maha100104.vercel.app/',
     icon: '🐾',
     bgGradient: 'from-orange-400/20 to-yellow-400/20',
     bullets: [
