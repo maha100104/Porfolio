@@ -26,7 +26,7 @@ const projects: Project[] = [
     title: 'Modern Developer Portfolio',
     category: 'Personal Projects',
     description: 'A highly interactive developer portfolio built to showcase personal projects, professional experience, and technical skills.',
-    githubUrl: 'https://porfolio-six-green.vercel.app/',
+    githubUrl: 'https://porfolio-maha100104.vercel.app/',
     icon: '✨',
     bgGradient: 'from-pink-500/20 to-rose-400/20',
     bullets: [
@@ -54,7 +54,7 @@ const projects: Project[] = [
     title: 'Travel Website',
     category: 'Personal Projects',
     description: 'A visually rich travel destination website showcasing destinations with modern UI and smooth interactions.',
-    githubUrl: 'https://travel-website-seven-zeta.vercel.app/',
+    githubUrl: 'https://travel-website-maha100104.vercel.app/',
     icon: '✈️',
     bgGradient: 'from-sky-500/20 to-cyan-400/20',
     bullets: [
@@ -68,7 +68,7 @@ const projects: Project[] = [
     title: 'Digital Clock',
     category: 'Personal Projects',
     description: 'A stylish real-time digital clock application with live time display built using JavaScript.',
-    githubUrl: 'https://digital-clock-cjpc.vercel.app/',
+    githubUrl: 'https://digital-clock-maha100104.vercel.app/',
     icon: '🕐',
     bgGradient: 'from-violet-500/20 to-fuchsia-500/20',
     bullets: [
