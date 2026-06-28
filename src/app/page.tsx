@@ -343,13 +343,13 @@ export default function Home() {
 
                 <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
                   <p>
-                    I'm <strong>Mahalakshmi</strong>, an Associate Software Developer with 1 year of professional experience building scalable web and mobile applications. I specialize in <strong>React Native, React, NestJS, TypeScript, and modern database technologies</strong> such as Drizzle ORM and SQL.
+                    I&apos;m <strong>Mahalakshmi</strong>, an Associate Software Developer with 1 year of professional experience building scalable web and mobile applications. I specialize in <strong>React Native, React, NestJS, TypeScript, and modern database technologies</strong> such as Drizzle ORM and SQL.
                   </p>
                   <p>
                     I enjoy building end-to-end applications—from designing intuitive user interfaces to developing secure, high-performance backend APIs. My experience includes developing production-ready applications in domains such as healthcare, education, and donation management, with a strong focus on clean architecture, performance, and user experience.
                   </p>
                   <p>
-                    I'm passionate about continuously learning new technologies, solving real-world problems, and creating software that is reliable, scalable, and easy to use. My goal is to transform complex technical challenges into simple, elegant, and user-centric digital solutions.
+                    I&apos;m passionate about continuously learning new technologies, solving real-world problems, and creating software that is reliable, scalable, and easy to use. My goal is to transform complex technical challenges into simple, elegant, and user-centric digital solutions.
                   </p>
                 </div>
 
@@ -391,7 +391,7 @@ export default function Home() {
 
                 {/* What I'm Doing Section */}
                 <div className="space-y-6 pt-4">
-                  <h3 className="text-xl font-semibold text-white">What I'm Doing</h3>
+                  <h3 className="text-xl font-semibold text-white">What I&apos;m Doing</h3>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
@@ -457,26 +457,29 @@ export default function Home() {
                     <div className="w-10 h-[5px] bg-[#ffdb70] rounded-full"></div>
                   </div>
 
-                  {/* Link to Printable resume page */}
+                  {/* Link to PDF Resume */}
                   <Link
-                    href="/resume"
+                    href="/MahalakshmiP_Resume.pdf"
                     target="_blank"
                     className="text-xs text-[#ffdb70] hover:underline font-semibold bg-[#2b2b2c] border border-[#383838] px-3.5 py-2 rounded-xl transition-all cursor-pointer flex items-center gap-1.5"
                   >
-                    View Printable Resume
+                    View as PDF
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                     </svg>
                   </Link>
                 </div>
 
-                <div className="space-y-8">
+                <div className="space-y-10 text-gray-300">
 
-                  {/* Software Skills Groups */}
-                  <div className="space-y-6">
-                    <h3 className="text-lg font-bold text-white">Software Skills</h3>
+                  {/* Software Skills */}
+                  <section className="space-y-4">
+                    <h3 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-3">
+                      <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
+                      Software Skills
+                    </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
+                      
                       {/* Frontend Group */}
                       <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
                         <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Frontend</h4>
@@ -601,105 +604,180 @@ export default function Home() {
                       </div>
 
                     </div>
-                  </div>
+                  </section>
 
-                  {/* Experience Timeline */}
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#3f3f40] to-[#2a2a2b] border border-[#383838] rounded-xl flex items-center justify-center text-[#ffdb70] shadow-md">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                      <h3 className="text-xl font-bold text-white">Experience</h3>
-                    </div>
+                  {/* Work Experience */}
+                  <section className="space-y-6">
+                    <h3 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-3">
+                      <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
+                      Experience
+                    </h3>
 
-                    <div className="border-l-2 border-[#383838] ml-5 pl-8 space-y-8 relative">
+                    <div className="border-l border-[#383838] ml-3 pl-6 space-y-8 relative">
 
-                      {/* Timeline Node 1 */}
+                      {/* Experience Item 1 */}
                       <div className="relative">
-                        <div className="absolute -left-[39px] top-1.5 w-3.5 h-3.5 bg-[#444] border-4 border-[#1e1e1f] rounded-full ring-4 ring-[#ffdb70]"></div>
-                        <div className="flex items-center gap-3 mb-2">
-                          <Image src={ItechLogo} alt="Itech India Logo" className="w-9 h-9 rounded bg-white object-contain" />
-                          <div>
-                            <h4 className="text-base font-bold text-white">Associate Software Developer</h4>
-                            <span className="text-xs text-[#ffdb70] font-medium block">Aug 2025 — Present | Itech India Private Limited</span>
+                        <div className="absolute -left-[31px] top-1.5 w-2.5 h-2.5 bg-[#444] border-2 border-[#1e1e1f] rounded-full ring-4 ring-[#ffdb70]"></div>
+                        
+                        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-1 mb-2">
+                          <div className="flex items-center gap-3">
+                            <Image src={ItechLogo} alt="Itech India Logo" className="w-8 h-8 rounded bg-white object-contain" />
+                            <h4 className="font-bold text-white text-base">Associate Software Developer</h4>
                           </div>
+                          <span className="text-xs text-[#ffdb70] font-semibold bg-[#2b2b2c] border border-[#383838] px-2.5 py-1 rounded-lg w-fit">
+                            Aug 2025 — Present
+                          </span>
                         </div>
-
-                        <div className="mt-3 space-y-4">
-                          <p className="text-sm text-gray-400 leading-relaxed">
+                        
+                        <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3 ml-11 block">
+                          Itech India Private Limited
+                        </span>
+                        
+                        <div className="mt-3 space-y-4 ml-11">
+                          <p className="text-xs text-gray-400 leading-relaxed">
                             Full-stack development of web and mobile applications. Engineered scalable REST APIs and streamlined user onboarding with government-backed secure verification systems.
                           </p>
-
-                          <div className="flex flex-wrap gap-2">
-                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Built 4 Production Apps</span>
-                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Aadhaar Integration/DigiLocker</span>
-                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Google Login/Microsoft Login</span>
+                          
+                          <div className="flex flex-wrap gap-1.5">
+                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300"><span className="text-[12px]">✅</span> Built 4 Production Apps</span>
+                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300"><span className="text-[12px]">✅</span> Aadhaar Integration</span>
+                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300"><span className="text-[12px]">✅</span> Google Login</span>
+                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300"><span className="text-[12px]">⚛️</span> React Native & NestJS</span>
                           </div>
                         </div>
                       </div>
 
-                      {/* Timeline Node 2 */}
+                      {/* Experience Item 2 */}
                       <div className="relative mt-8">
-                        <div className="absolute -left-[39px] top-1.5 w-3.5 h-3.5 bg-[#444] border-4 border-[#1e1e1f] rounded-full ring-4 ring-[#ffdb70]/50"></div>
-                        <div className="flex items-center gap-3 mb-2">
-                          <Image src={WorkoholLogo} alt="Workohol Logo" className="w-9 h-9 rounded bg-white object-contain" />
-                          <div>
-                            <h4 className="text-base font-bold text-white">Full-Stack Developer Intern</h4>
-                            <span className="text-xs text-[#ffdb70] font-medium block">April 2025 — July 2025 | Workcohol</span>
+                        <div className="absolute -left-[31px] top-1.5 w-2.5 h-2.5 bg-[#444] border-2 border-[#1e1e1f] rounded-full ring-4 ring-[#ffdb70]/50"></div>
+                        
+                        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-1 mb-2">
+                          <div className="flex items-center gap-3">
+                            <Image src={WorkoholLogo} alt="Workohol Logo" className="w-8 h-8 rounded bg-white object-contain" />
+                            <h4 className="font-bold text-white text-base">Full-Stack Developer Intern</h4>
                           </div>
+                          <span className="text-xs text-[#ffdb70] font-semibold bg-[#2b2b2c] border border-[#383838] px-2.5 py-1 rounded-lg w-fit">
+                            April 2025 — July 2025
+                          </span>
                         </div>
-
-                        <div className="mt-3 space-y-4">
-                          <p className="text-sm text-gray-400 leading-relaxed">
+                        
+                        <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3 ml-11 block">
+                          Workcohol
+                        </span>
+                        
+                        <div className="mt-3 space-y-4 ml-11">
+                          <p className="text-xs text-gray-400 leading-relaxed">
                             Engineered a highly responsive, real-time e-commerce platform with customizable themes to optimize the user checkout funnel.
                           </p>
-
-                          <div className="flex flex-wrap gap-2">
-                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Built Pet E-commerce</span>
-                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Firebase Integration</span>
+                          
+                          <div className="flex flex-wrap gap-1.5">
+                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300"><span className="text-[12px]">✅</span> Built Pet E-commerce</span>
+                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300"><span className="text-[12px]">✅</span> Firebase Integration</span>
                           </div>
                         </div>
                       </div>
 
                     </div>
-                  </div>
+                  </section>
 
-                  {/* Education Timeline */}
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#3f3f40] to-[#2a2a2b] border border-[#383838] rounded-xl flex items-center justify-center text-[#ffdb70] shadow-md">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
+                  {/* Technical Projects */}
+                  <section className="space-y-6">
+                    <h3 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-3">
+                      <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
+                      Technical Projects
+                    </h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                      {/* Project 1 */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <div className="flex justify-between items-start">
+                          <h4 className="font-bold text-white text-base">AiPod (Dental Application)</h4>
+                        </div>
+                        <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                          React.JS, Nest.JS, TypeORM
+                        </div>
+                        <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                          <li>Built a dental app allowing patients to securely upload photos and X-rays of their teeth from multiple angles for doctor review.</li>
+                          <li>Created a feature that automatically generates initial diagnosis and treatment plans based on uploaded images, saving doctor and patient time.</li>
+                        </ul>
                       </div>
-                      <h3 className="text-xl font-bold text-white">Education</h3>
-                    </div>
 
-                    <div className="border-l-2 border-[#383838] ml-5 pl-8 space-y-8 relative">
+                      {/* Project 2 */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <div className="flex justify-between items-start">
+                          <h4 className="font-bold text-white text-base">Leo Muthu Scholarship (LMS)</h4>
+                        </div>
+                        <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                          React Native, Nest.JS, Drizzle ORM
+                        </div>
+                        <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                          <li>Developed a full-stack scholarship portal where students apply online and staff verify details before releasing funds.</li>
+                          <li>Built secure login systems with Aadhaar and mobile OTPs, giving students a personal dashboard to track applications.</li>
+                        </ul>
+                      </div>
 
-                      <div className="relative">
-                        <div className="absolute -left-[39px] top-1.5 w-3.5 h-3.5 bg-[#444] border-4 border-[#1e1e1f] rounded-full ring-4 ring-[#ffdb70]"></div>
-                        <h4 className="text-base font-bold text-white">Sri Sairam Engineering College</h4>
-                        <span className="text-xs text-[#ffdb70] font-medium block my-1">B.Tech Information Technology | Graduated May 2025</span>
-                        <p className="text-xs sm:text-sm text-gray-400">
-                          Completed degree with CGPA: 8.29 / 10.0
-                        </p>
+                      {/* Project 3 */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <div className="flex justify-between items-start">
+                          <h4 className="font-bold text-white text-base">Aram Foundation Donation App</h4>
+                        </div>
+                        <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                          React Native, Nest.JS, Drizzle ORM
+                        </div>
+                        <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                          <li>Created a secure, user-friendly donation platform that makes it easy for users to contribute funds to the foundation online.</li>
+                          <li>Built a custom admin dashboard that lets foundation staff easily hide, show, or manage specific input fields on the app without writing code.</li>
+                        </ul>
+                      </div>
+
+                      {/* Project 4 */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <div className="flex justify-between items-start">
+                          <h4 className="font-bold text-white text-base">IQAC Event Scheduling System</h4>
+                        </div>
+                        <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                          React, Vite, Nest.JS, Drizzle ORM
+                        </div>
+                        <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                          <li>Designed a centralized college management platform to easily schedule exams and notify students/staff of events.</li>
+                          <li>Wrote custom backend logic to automatically prevent scheduling conflicts, ensuring that exams and college events never overlap.</li>
+                        </ul>
                       </div>
 
                     </div>
-                  </div>
+                  </section>
 
-                  {/* Awards & Certifications */}
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-bold text-white">Awards & Certifications</h3>
-                    <ul className="text-xs sm:text-sm text-gray-400 list-disc ml-5 space-y-2">
+                  {/* Education */}
+                  <section className="space-y-4">
+                    <h3 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-3">
+                      <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
+                      Education
+                    </h3>
+                    <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] flex flex-col sm:flex-row justify-between sm:items-center gap-4 hover:border-[#ffdb70]/20 transition-all duration-300">
+                      <div>
+                        <h4 className="font-bold text-white text-base">Sri Sairam Engineering College</h4>
+                        <p className="text-sm text-gray-400">B.Tech Information Technology</p>
+                      </div>
+                      <div className="text-left sm:text-right text-xs sm:text-sm">
+                        <span className="text-[#ffdb70] font-semibold block">May 2025</span>
+                        <span className="text-gray-500 font-medium">CGPA: 8.29 / 10.0</span>
+                      </div>
+                    </div>
+                  </section>
+
+                  {/* Awards and Certifications */}
+                  <section className="space-y-4">
+                    <h3 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-3">
+                      <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
+                      Awards & Certifications
+                    </h3>
+                    <ul className="text-xs sm:text-sm space-y-3 text-gray-400 list-disc ml-4">
                       <li>Strategic Excellence Award — Sri Sairam Engineering College</li>
                       <li>Best Project Award (2024) — Institute of Engineers (India), Hosur Local Center</li>
                       <li>Diploma in Computer Application (DCA) — Guru Computers (Scored 89/100)</li>
                     </ul>
-                  </div>
+                  </section>
 
                 </div>
 
