@@ -113,13 +113,13 @@ export default function ResumePage() {
           </h2>
           <div className="space-y-4 text-sm sm:text-base leading-relaxed text-gray-300">
             <p>
-              I'm <strong>Mahalakshmi</strong>, an Associate Software Developer with 1 year of professional experience building scalable web and mobile applications. I specialize in <strong>React Native, React, NestJS, TypeScript, and modern database technologies</strong> such as Drizzle ORM and SQL.
+              I&apos;m <strong>Mahalakshmi</strong>, an Associate Software Developer with 1 year of professional experience building scalable web and mobile applications. I specialize in <strong>React Native, React, NestJS, TypeScript, and modern database technologies</strong> such as Drizzle ORM and SQL.
             </p>
             <p>
               I enjoy building end-to-end applications—from designing intuitive user interfaces to developing secure, high-performance backend APIs. My experience includes developing production-ready applications in domains such as healthcare, education, and donation management, with a strong focus on clean architecture, performance, and user experience.
             </p>
             <p>
-              I'm passionate about continuously learning new technologies, solving real-world problems, and creating software that is reliable, scalable, and easy to use. My goal is to transform complex technical challenges into simple, elegant, and user-centric digital solutions.
+              I&apos;m passionate about continuously learning new technologies, solving real-world problems, and creating software that is reliable, scalable, and easy to use. My goal is to transform complex technical challenges into simple, elegant, and user-centric digital solutions.
             </p>
           </div>
         </section>
