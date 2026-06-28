@@ -36,8 +36,8 @@ export default function ResumePage() {
   const handleDownload = () => {
     // Triggers download of the PDF placed in the public folder
     const link = document.createElement('a');
-    link.href = '/Mahalakshmi_Resume.pdf';
-    link.download = 'Mahalakshmi_Resume.pdf';
+    link.href = '/MahalakshmiP_Resume.pdf';
+    link.download = 'MahalakshmiP_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
