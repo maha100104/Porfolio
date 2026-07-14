@@ -341,6 +341,23 @@ export default function ResumePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
+            {/* E-Commerce Platform */}
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
+              <div className="flex justify-between items-start">
+                <h3 className="font-bold text-white text-base">Full-Stack E-Commerce Platform</h3>
+              </div>
+              <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                React, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS
+              </div>
+              <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                <li>Developed a secure full-stack e-commerce app with JWT authentication (access/refresh tokens) and role-based access control.</li>
+                <li>Utilized Drizzle ORM with MySQL to design relational schemas and query profiles, orders, and products.</li>
+                <li>Built an Admin Dashboard supporting database-level user search, filtering, and product inventory controls.</li>
+                <li>Configured custom API middleware with Axios to handle seamless token refresh and CORS requests.</li>
+                <li>Successfully deployed backend services on Render connected to a remote Railway database.</li>
+              </ul>
+            </div>
+
             {/* Project 1 */}
             <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
               <div className="flex justify-between items-start">

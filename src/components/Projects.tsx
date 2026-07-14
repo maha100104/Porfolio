@@ -11,6 +11,12 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'Full-Stack E-Commerce Platform',
+    description: 'A secure full-stack e-commerce platform with JWT authentication, role-based access control, and a comprehensive admin inventory dashboard.',
+    githubUrl: 'https://e-commerce-maha100104.vercel.app',
+    icon: '🛍️'
+  },
+  {
     title: 'E-commerce Website',
     description: 'Full-featured e-commerce platform with shopping cart, user authentication, and payment integration',
     githubUrl: 'https://github.com/maha100104/PupCart-E-CommerceWebsite',
