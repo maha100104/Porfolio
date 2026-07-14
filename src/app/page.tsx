@@ -10,6 +10,7 @@ import DigitalClockLogo from './assests/Digital Clock.png';
 import PupCartLogo from './assests/PupCart.png';
 import TravelLogo from './assests/travel.png';
 import PortfolioImg from './assests/Portfolio.png';
+import EcommerceImg from './assests/Fullstack E-commerce.png';
 interface Project {
   title: string;
   category: 'Professional Projects' | 'Personal Projects';
@@ -22,6 +23,7 @@ interface Project {
 }
 
 const projects: Project[] = [
+
 
   {
     title: 'AiPod (Dental Application)',
@@ -78,6 +80,21 @@ const projects: Project[] = [
       '✔ Centralized exam scheduling',
       '✔ Automated notifications'
     ]
+  },
+  {
+    title: 'Full-Stack E-Commerce Platform',
+    category: 'Personal Projects',
+    description: 'Full-Stack E-Commerce Platform built with React, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS.',
+    githubUrl: 'https://e-commerce-maha100104.vercel.app/login',
+    icon: '🛍️',
+    bgGradient: 'from-teal-500/20 to-cyan-500/20',
+    bullets: [
+      'React • TypeScript • NestJS • Drizzle ORM • MySQL • JWT • Tailwind CSS',
+      '✔ Implemented JWT authentication with access/refresh tokens and role‑based access control',
+      '✔ Built an Admin Dashboard with user search, filtering, and product inventory management',
+      '✔ Deployed frontend on Vercel, backend on Render, MySQL on Railway, using Axios interceptors for token refresh and CORS handling'
+    ],
+    image: EcommerceImg.src
   },
   {
     title: 'Modern Developer Portfolio',
@@ -459,11 +476,12 @@ export default function Home() {
 
                   {/* Link to Printable resume page */}
                   <Link
-                    href="/resume"
+                    href="/Mahalakshmi_Resume.pdf"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs text-[#ffdb70] hover:underline font-semibold bg-[#2b2b2c] border border-[#383838] px-3.5 py-2 rounded-xl transition-all cursor-pointer flex items-center gap-1.5"
                   >
-                    View Printable Resume
+                    View Resume
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                     </svg>
