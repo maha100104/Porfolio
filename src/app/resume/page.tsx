@@ -132,14 +132,14 @@ export default function ResumePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Frontend Group */}
+            {/* Programming Languages Group */}
             <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Frontend</h3>
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Programming Languages</h3>
               <div className="space-y-3.5">
                 <div className="space-y-1.5">
                   <div className="flex justify-between items-center text-xs font-semibold">
                     <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>⚛</span> React
+                      <span>🟦</span> TypeScript
                     </span>
                     <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
                   </div>
@@ -150,12 +150,63 @@ export default function ResumePage() {
                 <div className="space-y-1.5">
                   <div className="flex justify-between items-center text-xs font-semibold">
                     <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>📱</span> React Native
+                      <span>🟨</span> JavaScript
                     </span>
                     <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
                   </div>
                   <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '90%' }}></div>
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
+                  </div>
+                </div>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-center text-xs font-semibold">
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>☕</span> Java
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                  </div>
+                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Frontend Group */}
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Frontend</h3>
+              <div className="space-y-3.5">
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-center text-xs font-semibold">
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>🟦</span> TypeScript
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                  </div>
+                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
+                  </div>
+                </div>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-center text-xs font-semibold">
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>⚛️</span> React.js
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                  </div>
+                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
+                  </div>
+                </div>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-center text-xs font-semibold">
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>▲</span> Next.js
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                  </div>
+                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
                   </div>
                 </div>
               </div>
@@ -184,18 +235,29 @@ export default function ResumePage() {
                     <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
                   </div>
                   <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '90%' }}></div>
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
                   </div>
                 </div>
                 <div className="space-y-1.5">
                   <div className="flex justify-between items-center text-xs font-semibold">
                     <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>☕</span> Java
+                      <span>🟢</span> Node.js
                     </span>
                     <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                   </div>
                   <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
                     <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
+                  </div>
+                </div>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-center text-xs font-semibold">
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>🔗</span> REST API
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                  </div>
+                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
                   </div>
                 </div>
               </div>
@@ -219,7 +281,29 @@ export default function ResumePage() {
                 <div className="space-y-1.5">
                   <div className="flex justify-between items-center text-xs font-semibold">
                     <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🗄️</span> Drizzle ORM
+                      <span>🛢️</span> SQL Server
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                  </div>
+                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
+                  </div>
+                </div>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-center text-xs font-semibold">
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>💧</span> Drizzle ORM
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                  </div>
+                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
+                  </div>
+                </div>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-center text-xs font-semibold">
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>📦</span> TypeORM
                     </span>
                     <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                   </div>
@@ -230,14 +314,16 @@ export default function ResumePage() {
               </div>
             </div>
 
-            {/* Tools Card */}
+            {/* Database Tools Group */}
             <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Tools</h3>
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Database Tools</h3>
               <div className="space-y-3.5">
                 <div className="space-y-1.5">
                   <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200">Git / GitHub</span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Intermediate</span>
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>🛠️</span> Beekeeper Studio
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                   </div>
                   <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
                     <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
@@ -245,12 +331,51 @@ export default function ResumePage() {
                 </div>
                 <div className="space-y-1.5">
                   <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200">Beekeeper Studio / pgAdmin</span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Intermediate</span>
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>🐘</span> pgAdmin
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                   </div>
                   <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
                     <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Version Control Group */}
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Version Control</h3>
+              <div className="space-y-3.5">
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-center text-xs font-semibold">
+                    <span className="text-gray-200 flex items-center gap-1.5">
+                      <span>🌿</span> Git & GitHub
+                    </span>
+                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                  </div>
+                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
+                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Deployment & Cloud Group */}
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg md:col-span-2">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Deployment & Cloud</h3>
+              <div className="space-y-3 text-gray-200 text-xs font-semibold">
+                <div className="flex items-center gap-2">
+                  <span>▲</span> Vercel <span className="text-gray-400 font-normal">(Frontend Deployment)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>🚀</span> Render <span className="text-gray-400 font-normal">(Backend Deployment)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>🚂</span> Railway <span className="text-gray-400 font-normal">(Database Hosting)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>☁️</span> TiDB Cloud <span className="text-gray-400 font-normal">(Managed MySQL-Compatible Database)</span>
                 </div>
               </div>
             </div>

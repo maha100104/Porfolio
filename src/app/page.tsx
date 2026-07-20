@@ -10,7 +10,8 @@ import DigitalClockLogo from './assests/Digital Clock.png';
 import PupCartLogo from './assests/PupCart.png';
 import TravelLogo from './assests/travel.png';
 import PortfolioImg from './assests/Portfolio.png';
-import EcommerceImg from './assests/FullStack-Ecommerce.png';
+import EcommerceImg from './assests/Fullstack E-commerce.png';
+import TodoAppImg from './assests/Todo-App.png';
 interface Project {
   title: string;
   category: 'Professional Projects' | 'Personal Projects';
@@ -23,6 +24,7 @@ interface Project {
 }
 
 const projects: Project[] = [
+
 
   {
     title: 'AiPod (Dental Application)',
@@ -81,17 +83,32 @@ const projects: Project[] = [
     ]
   },
   {
+    title: 'TaskFlow – Modern Full-Stack Todo & Productivity Dashboard',
+    category: 'Personal Projects',
+    description: 'A modern full-stack productivity application featuring secure authentication, task management, category filters, analytics, and dark/light themes.',
+    githubUrl: 'https://todo-maha100104.vercel.app/',
+    icon: '✅',
+    bgGradient: 'from-blue-500/20 to-cyan-500/20',
+    bullets: [
+      'React • Vite • TypeScript • NestJS • Drizzle ORM • MySQL',
+      '✔ Features JWT authentication, task CRUD with soft delete, and priority/category management',
+      '✔ Integrated task analytics, progress tracking, search/filtering, and dark/light themes',
+      '✔ Deployed frontend on Vercel, backend on Render, and MySQL on Railway'
+    ],
+    image: TodoAppImg.src
+  },
+  {
     title: 'Full-Stack E-Commerce Platform',
     category: 'Personal Projects',
-    description: 'A secure full-stack e-commerce platform with JWT authentication, role-based access control, and a comprehensive admin inventory dashboard.',
-    githubUrl: 'https://e-commerce-maha100104.vercel.app',
+    description: 'Full-Stack E-Commerce Platform built with React, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS.',
+    githubUrl: 'https://e-commerce-maha100104.vercel.app/login',
     icon: '🛍️',
     bgGradient: 'from-teal-500/20 to-cyan-500/20',
     bullets: [
       'React • TypeScript • NestJS • Drizzle ORM • MySQL • JWT • Tailwind CSS',
-      '✔ JWT auth with access/refresh tokens & role-based access control',
-      '✔ Admin Dashboard with user search, filtering & inventory controls',
-      '✔ Deployed on Render + Railway with Axios middleware for CORS & token refresh'
+      '✔ Implemented JWT authentication with access/refresh tokens and role‑based access control',
+      '✔ Built an Admin Dashboard with user search, filtering, and product inventory management',
+      '✔ Deployed frontend on Vercel, backend on Render, MySQL on Railway, using Axios interceptors for token refresh and CORS handling'
     ],
     image: EcommerceImg.src
   },
@@ -474,7 +491,7 @@ export default function Home() {
                   </div>
 
                   {/* Link to Printable resume page */}
-                  <a
+                  <Link
                     href="/Mahalakshmi_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -484,7 +501,7 @@ export default function Home() {
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="space-y-8">
@@ -494,14 +511,14 @@ export default function Home() {
                     <h3 className="text-lg font-bold text-white">Software Skills</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                      {/* Frontend Group */}
+                      {/* Programming Languages Group */}
                       <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Frontend</h4>
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Programming Languages</h4>
                         <div className="space-y-3.5">
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
                               <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>⚛</span> React
+                                <span>🟦</span> TypeScript
                               </span>
                               <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
                             </div>
@@ -512,12 +529,63 @@ export default function Home() {
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
                               <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>📱</span> React Native
+                                <span>🟨</span> JavaScript
                               </span>
                               <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
                             </div>
                             <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '90%' }}></div>
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
+                            </div>
+                          </div>
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs font-semibold">
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>☕</span> Java
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                            </div>
+                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Frontend Group */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Frontend</h4>
+                        <div className="space-y-3.5">
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs font-semibold">
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>🟦</span> TypeScript
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                            </div>
+                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
+                            </div>
+                          </div>
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs font-semibold">
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>⚛️</span> React.js
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                            </div>
+                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
+                            </div>
+                          </div>
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs font-semibold">
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>▲</span> Next.js
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                            </div>
+                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
                             </div>
                           </div>
                         </div>
@@ -546,18 +614,29 @@ export default function Home() {
                               <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
                             </div>
                             <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '90%' }}></div>
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
                             </div>
                           </div>
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
                               <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>☕</span> Java
+                                <span>🟢</span> Node.js
                               </span>
                               <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                             </div>
                             <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
                               <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                            </div>
+                          </div>
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs font-semibold">
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>🔗</span> REST API
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                            </div>
+                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
                             </div>
                           </div>
                         </div>
@@ -581,7 +660,29 @@ export default function Home() {
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
                               <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🗄️</span> Drizzle ORM
+                                <span>🛢️</span> SQL Server
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                            </div>
+                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                            </div>
+                          </div>
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs font-semibold">
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>💧</span> Drizzle ORM
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                            </div>
+                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                            </div>
+                          </div>
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs font-semibold">
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>📦</span> TypeORM
                               </span>
                               <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                             </div>
@@ -592,14 +693,16 @@ export default function Home() {
                         </div>
                       </div>
 
-                      {/* Tools Card */}
+                      {/* Database Tools Group */}
                       <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Tools</h4>
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Database Tools</h4>
                         <div className="space-y-3.5">
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200">Git / GitHub</span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Intermediate</span>
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>🛠️</span> Beekeeper Studio
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                             </div>
                             <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
                               <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
@@ -607,12 +710,51 @@ export default function Home() {
                           </div>
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200">Beekeeper Studio / pgAdmin</span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Intermediate</span>
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>🐘</span> pgAdmin
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                             </div>
                             <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
                               <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
                             </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Version Control Group */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Version Control</h4>
+                        <div className="space-y-3.5">
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs font-semibold">
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>🌿</span> Git & GitHub
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                            </div>
+                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Deployment & Cloud Group */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300 md:col-span-2">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Deployment & Cloud</h4>
+                        <div className="space-y-3 text-gray-200 text-xs font-semibold">
+                          <div className="flex items-center gap-2">
+                            <span>▲</span> Vercel <span className="text-gray-400 font-normal">(Frontend Deployment)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span>🚀</span> Render <span className="text-gray-400 font-normal">(Backend Deployment)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span>🚂</span> Railway <span className="text-gray-400 font-normal">(Database Hosting)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span>☁️</span> TiDB Cloud <span className="text-gray-400 font-normal">(Managed MySQL-Compatible Database)</span>
                           </div>
                         </div>
                       </div>
