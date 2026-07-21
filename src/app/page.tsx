@@ -523,7 +523,7 @@ export default function Home() {
 
                   {/* Link to Printable resume page */}
                   <Link
-                    href="/MahalakshmiP_Resume.pdf"
+                    href="/MahalakshmiP_Resume.pdf?v=2"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-[#ffdb70] hover:underline font-semibold bg-[#2b2b2c] border border-[#383838] px-3.5 py-2 rounded-xl transition-all cursor-pointer flex items-center gap-1.5"
