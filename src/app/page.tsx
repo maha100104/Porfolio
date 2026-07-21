@@ -374,15 +374,46 @@ export default function Home() {
                   <div className="w-10 h-[5px] bg-[#ffdb70] rounded-full"></div>
                 </div>
 
-                <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+                <div className="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
                   <p>
-                    I'm <strong>Mahalakshmi</strong>, an Associate Software Developer with 1 year of professional experience building scalable web and mobile applications. I specialize in <strong>React Native, React, NestJS, TypeScript, and modern database technologies</strong> such as Drizzle ORM and SQL.
+                    Hi, I'm <strong>Mahalakshmi</strong>, an <strong>Associate Software Developer</strong> with over <strong>1 year of experience</strong> building scalable full-stack web applications. I specialize in the <strong>TypeScript ecosystem</strong>, working with <strong>React.js, NestJS, Java, MySQL, and modern web technologies</strong> to deliver secure and high-performance applications.
                   </p>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-3">What I Do</h3>
+                    <ul className="space-y-2.5">
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-base shrink-0 mt-0.5">💻</span>
+                        <span>Build end-to-end full-stack web applications using React.js, NestJS, and TypeScript.</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-base shrink-0 mt-0.5">🔐</span>
+                        <span>Develop secure REST APIs with JWT authentication and role-based access control.</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-base shrink-0 mt-0.5">🗄️</span>
+                        <span>Design and integrate scalable database solutions using Drizzle ORM, MySQL, and SQL Server.</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-base shrink-0 mt-0.5">☁️</span>
+                        <span>Deploy production-ready applications on modern cloud platforms.</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-base shrink-0 mt-0.5">🚀</span>
+                        <span>Create responsive, user-friendly interfaces with clean, maintainable code.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-3">Experience</h3>
+                    <p>
+                      I've worked on projects across <strong>e-commerce, healthcare, education, productivity, and donation management</strong>, building features such as authentication systems, admin dashboards, real-time task management, and secure third-party integrations including <strong>Google, Microsoft, and Aadhaar (DigiLocker)</strong> authentication.
+                    </p>
+                  </div>
+
                   <p>
-                    I enjoy building end-to-end applications—from designing intuitive user interfaces to developing secure, high-performance backend APIs. My experience includes developing production-ready applications in domains such as healthcare, education, and donation management, with a strong focus on clean architecture, performance, and user experience.
-                  </p>
-                  <p>
-                    I'm passionate about continuously learning new technologies, solving real-world problems, and creating software that is reliable, scalable, and easy to use. My goal is to transform complex technical challenges into simple, elegant, and user-centric digital solutions.
+                    I'm passionate about solving real-world problems through technology and continuously improving my skills. My goal is to build software that is <strong>secure, scalable, and intuitive</strong>, delivering meaningful experiences for users.
                   </p>
                 </div>
 
@@ -518,12 +549,12 @@ export default function Home() {
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
                               <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🟦</span> TypeScript
+                                <span>☕</span> Java
                               </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                             </div>
                             <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
                             </div>
                           </div>
                           <div className="space-y-1.5">
@@ -531,16 +562,16 @@ export default function Home() {
                               <span className="text-gray-200 flex items-center gap-1.5">
                                 <span>🟨</span> JavaScript
                               </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                             </div>
                             <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
                             </div>
                           </div>
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
                               <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>☕</span> Java
+                                <span>🟦</span> TypeScript
                               </span>
                               <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                             </div>
@@ -555,17 +586,6 @@ export default function Home() {
                       <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
                         <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Frontend</h4>
                         <div className="space-y-3.5">
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🟦</span> TypeScript
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
-                            </div>
-                          </div>
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
                               <span className="text-gray-200 flex items-center gap-1.5">
@@ -588,6 +608,17 @@ export default function Home() {
                               <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
                             </div>
                           </div>
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs font-semibold">
+                              <span className="text-gray-200 flex items-center gap-1.5">
+                                <span>🌊</span> Tailwind CSS
+                              </span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                            </div>
+                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
@@ -595,17 +626,6 @@ export default function Home() {
                       <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
                         <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Backend</h4>
                         <div className="space-y-3.5">
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🟦</span> TypeScript
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
-                            </div>
-                          </div>
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
                               <span className="text-gray-200 flex items-center gap-1.5">
@@ -671,18 +691,7 @@ export default function Home() {
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
                               <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>💧</span> Drizzle ORM
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
-                            </div>
-                          </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>📦</span> TypeORM
+                                <span>💧</span> TypeORM / Drizzle ORM
                               </span>
                               <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
                             </div>
