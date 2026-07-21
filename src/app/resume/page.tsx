@@ -14,7 +14,7 @@ export default function ResumePage() {
     const params = new URLSearchParams(window.location.search);
     const action = params.get('action');
     if (action === 'print' || action === 'download') {
-      document.title = 'MahalakshmiP Resume';
+      document.title = 'MahalakshmiP_Resume';
       const timer = setTimeout(() => {
         window.print();
       }, 500);
@@ -23,13 +23,13 @@ export default function ResumePage() {
   }, []);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('mahalakshmi@example.com');
+    navigator.clipboard.writeText('mahalakshmi01102004@gmail.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
   const handlePrint = () => {
-    document.title = 'MahalakshmiP Resume';
+    document.title = 'MahalakshmiP_Resume';
     window.print();
   };
 
@@ -86,21 +86,28 @@ export default function ResumePage() {
         {/* Header Block */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-6 border-b border-[#383838]">
           <div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Mahalakshmi</h1>
-            <p className="text-[#ffdb70] font-medium tracking-wide">Full Stack Developer</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">MAHALAKSHMI P</h1>
+            <p className="text-[#ffdb70] font-medium tracking-wide">Full-Stack Developer</p>
           </div>
           <div className="text-xs space-y-2 text-gray-400">
             <div className="flex items-center gap-2">
-              <span className="text-[#ffdb70]">📍</span> Chennai, India
+              <span className="text-[#ffdb70]">📍</span> Chennai, Tamil Nadu, India
             </div>
             <div className="flex items-center gap-2 cursor-pointer group" onClick={handleCopyEmail}>
               <span className="text-[#ffdb70]">✉️</span>
-              <span className="group-hover:text-[#ffdb70] transition-colors">
-                {copiedEmail ? 'Copied to Clipboard!' : 'mahalakshmi@example.com'}
+              <span className="group-hover:text-[#ffdb70] transition-colors font-medium">
+                {copiedEmail ? 'Copied to Clipboard!' : 'mahalakshmi01102004@gmail.com'}
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-[#ffdb70]">📞</span> +91 98765 43210
+              <span className="text-[#ffdb70]">📞</span> +91-9384175944
+            </div>
+            <div className="flex flex-wrap gap-x-3 gap-y-1 pt-1 text-[11px] text-gray-400">
+              <a href="https://linkedin.com/in/maha100104" target="_blank" rel="noopener noreferrer" className="hover:text-[#ffdb70] underline">LinkedIn</a>
+              <span>|</span>
+              <a href="https://github.com/maha100104" target="_blank" rel="noopener noreferrer" className="hover:text-[#ffdb70] underline">GitHub</a>
+              <span>|</span>
+              <a href="https://portfolio-maha100104.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-[#ffdb70] underline">Portfolio</a>
             </div>
           </div>
         </div>
@@ -109,274 +116,100 @@ export default function ResumePage() {
         <section className="space-y-4">
           <h2 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-3">
             <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
-            Executive Summary
+            Professional Summary
           </h2>
           <div className="space-y-4 text-sm sm:text-base leading-relaxed text-gray-300">
             <p>
-              I&apos;m <strong>Mahalakshmi</strong>, an Associate Software Developer with 1 year of professional experience building scalable web and mobile applications. I specialize in <strong>React Native, React, NestJS, TypeScript, and modern database technologies</strong> such as Drizzle ORM and SQL.
-            </p>
-            <p>
-              I enjoy building end-to-end applications—from designing intuitive user interfaces to developing secure, high-performance backend APIs. My experience includes developing production-ready applications in domains such as healthcare, education, and donation management, with a strong focus on clean architecture, performance, and user experience.
-            </p>
-            <p>
-              I&apos;m passionate about continuously learning new technologies, solving real-world problems, and creating software that is reliable, scalable, and easy to use. My goal is to transform complex technical challenges into simple, elegant, and user-centric digital solutions.
+              Full-Stack Software Developer with 1+ year of professional experience building and deploying scalable web applications using <strong>React.js, Next.js, NestJS, TypeScript, and Java</strong>. Skilled in designing secure RESTful APIs, JWT-based authentication, relational database design (MySQL, SQL Server), and responsive UI development with Tailwind CSS. Experienced across the full software development lifecycle, from requirements to deployment on Vercel, Railway and Render. Strong track record of delivering production-ready applications.
             </p>
           </div>
         </section>
 
-        {/* Software Skills */}
+        {/* Technical Skills */}
         <section className="space-y-4">
           <h2 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-3">
             <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
-            Software Skills
+            Technical Skills
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Programming Languages Group */}
+            {/* Languages Group */}
             <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Programming Languages</h3>
-              <div className="space-y-3.5">
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🟦</span> TypeScript
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🟨</span> JavaScript
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>☕</span> Java
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Java</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">JavaScript</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">TypeScript</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">SQL</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">HTML5</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">CSS3</span>
               </div>
             </div>
 
             {/* Frontend Group */}
             <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
               <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Frontend</h3>
-              <div className="space-y-3.5">
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🟦</span> TypeScript
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>⚛️</span> React.js
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>▲</span> Next.js
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">React.js</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Next.js</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Vite</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Tailwind CSS</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Radix UI</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Responsive Web Design</span>
               </div>
             </div>
 
             {/* Backend Group */}
             <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
               <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Backend</h3>
-              <div className="space-y-3.5">
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🟦</span> TypeScript
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🟩</span> NestJS
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🟢</span> Node.js
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🔗</span> REST API
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Node.js</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">NestJS</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">REST API Design</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">JWT Authentication</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Role-Based Access Control</span>
               </div>
             </div>
 
-            {/* Databases Group */}
+            {/* Databases & ORM Group */}
             <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Database</h3>
-              <div className="space-y-3.5">
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🐬</span> MySQL
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🛢️</span> SQL Server
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>💧</span> Drizzle ORM
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>📦</span> TypeORM
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Databases & ORM</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">MySQL</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">SQL Server</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Drizzle ORM</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">TypeORM</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Firebase</span>
               </div>
             </div>
 
-            {/* Database Tools Group */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Database Tools</h3>
-              <div className="space-y-3.5">
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🛠️</span> Beekeeper Studio
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🐘</span> pgAdmin
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Version Control Group */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Version Control</h3>
-              <div className="space-y-3.5">
-                <div className="space-y-1.5">
-                  <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="text-gray-200 flex items-center gap-1.5">
-                      <span>🌿</span> Git & GitHub
-                    </span>
-                    <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                  </div>
-                  <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden print-skill-bg">
-                    <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full print-skill-bar" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Deployment & Cloud Group */}
+            {/* Tools & Platforms Group */}
             <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg md:col-span-2">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Deployment & Cloud</h3>
-              <div className="space-y-3 text-gray-200 text-xs font-semibold">
-                <div className="flex items-center gap-2">
-                  <span>▲</span> Vercel <span className="text-gray-400 font-normal">(Frontend Deployment)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span>🚀</span> Render <span className="text-gray-400 font-normal">(Backend Deployment)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span>🚂</span> Railway <span className="text-gray-400 font-normal">(Database Hosting)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span>☁️</span> TiDB Cloud <span className="text-gray-400 font-normal">(Managed MySQL-Compatible Database)</span>
-                </div>
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Tools & Platforms</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Git</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">GitHub</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Vercel</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Render</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Railway</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Linux</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Postman</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">pnpm</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Cursor</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Beekeeper Studio</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">pgAdmin</span>
+              </div>
+            </div>
+
+            {/* Soft Skills Group */}
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg md:col-span-2">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Soft Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Problem Solving</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Team Collaboration</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Communication</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Time Management</span>
+                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Adaptability</span>
               </div>
             </div>
 
@@ -387,7 +220,7 @@ export default function ResumePage() {
         <section className="space-y-6">
           <h2 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-3">
             <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
-            Experience
+            Professional Experience
           </h2>
 
           <div className="border-l border-[#383838] ml-3 pl-6 space-y-8 relative">
@@ -402,7 +235,7 @@ export default function ResumePage() {
                   <h3 className="font-bold text-white text-base">Associate Software Developer</h3>
                 </div>
                 <span className="text-xs text-[#ffdb70] font-semibold bg-[#2b2b2c] border border-[#383838] px-2.5 py-1 rounded-lg">
-                  Aug 2025 — Present
+                  Aug 2025 – Present
                 </span>
               </div>
               
@@ -410,17 +243,12 @@ export default function ResumePage() {
                 Itech India Private Limited
               </h4>
               
-              <div className="mt-3 space-y-4 ml-11">
-                <p className="text-xs text-gray-400 leading-relaxed">
-                  Full-stack development of web and mobile applications. Engineered scalable REST APIs and streamlined user onboarding with government-backed secure verification systems.
-                </p>
-                
-                <div className="flex flex-wrap gap-1.5">
-                  <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300 print-skill-bg"><span className="text-[12px]">✅</span> Built 4 Production Apps</span>
-                  <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300 print-skill-bg"><span className="text-[12px]">✅</span> Aadhaar Integration</span>
-                  <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300 print-skill-bg"><span className="text-[12px]">✅</span> Google Login</span>
-                  <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300 print-skill-bg"><span className="text-[12px]">⚛️</span> React Native & NestJS</span>
-                </div>
+              <div className="mt-3 space-y-2 ml-11 text-xs sm:text-sm text-gray-400">
+                <ul className="list-disc ml-4 space-y-2 leading-relaxed">
+                  <li>Developed and maintained 3+ full-stack web applications using React.js, NestJS, and TypeScript, delivering scalable frontend and backend solutions.</li>
+                  <li>Integrated Google and Microsoft OAuth authentication along with Aadhaar verification via DigiLocker, enabling secure and seamless user onboarding.</li>
+                  <li>Collaborated with cross-functional teams to design, optimize, and maintain relational databases using Linux-based development tools.</li>
+                </ul>
               </div>
             </div>
 
@@ -434,7 +262,7 @@ export default function ResumePage() {
                   <h3 className="font-bold text-white text-base">Full-Stack Developer Intern</h3>
                 </div>
                 <span className="text-xs text-[#ffdb70] font-semibold bg-[#2b2b2c] border border-[#383838] px-2.5 py-1 rounded-lg">
-                  April 2025 — July 2025
+                  Apr 2025 – Jul 2025
                 </span>
               </div>
               
@@ -442,15 +270,11 @@ export default function ResumePage() {
                 Workcohol
               </h4>
               
-              <div className="mt-3 space-y-4 ml-11">
-                <p className="text-xs text-gray-400 leading-relaxed">
-                  Engineered a highly responsive, real-time e-commerce platform with customizable themes to optimize the user checkout funnel.
-                </p>
-                
-                <div className="flex flex-wrap gap-1.5">
-                  <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300 print-skill-bg"><span className="text-[12px]">✅</span> Built Pet E-commerce</span>
-                  <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-2 py-1 rounded text-[10px] font-semibold text-gray-300 print-skill-bg"><span className="text-[12px]">✅</span> Firebase Integration</span>
-                </div>
+              <div className="mt-3 space-y-2 ml-11 text-xs sm:text-sm text-gray-400">
+                <ul className="list-disc ml-4 space-y-2 leading-relaxed">
+                  <li>Developed a real-time Pet Accessories e-commerce platform using React.js, JavaScript, HTML, CSS, and Firebase, delivering a responsive and interactive shopping experience.</li>
+                  <li>Designed and implemented responsive, customizable user interfaces, improving usability across devices and providing a seamless shopping experience.</li>
+                </ul>
               </div>
             </div>
 
@@ -464,79 +288,121 @@ export default function ResumePage() {
             Technical Projects
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-6">
 
-            {/* E-Commerce Platform */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
-              <div className="flex justify-between items-start">
-                <h3 className="font-bold text-white text-base">Full-Stack E-Commerce Platform</h3>
+            {/* Internship Project */}
+            <div className="space-y-3">
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Internship Project</h3>
+              <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
+                <div className="flex justify-between items-start">
+                  <h4 className="font-bold text-white text-base">PupCart – Pet E-Commerce Website</h4>
+                  <a href="https://pup-cart-e-commerce-website-maha100104.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-[#ffdb70] hover:underline font-semibold flex items-center gap-1">
+                    Live Demo
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+                  </a>
+                </div>
+                <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                  React.js, Next.js, Firebase
+                </div>
+                <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                  <li>Built a fully functional pet e-commerce website with product listings, product details, shopping cart functionality, and a responsive user interface.</li>
+                  <li>Developed using React.js, Next.js, and Firebase, delivering a fast, scalable, and mobile-friendly shopping experience.</li>
+                </ul>
               </div>
-              <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
-                React, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS
-              </div>
-              <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
-                <li>Developed a secure full-stack e-commerce app with JWT authentication (access/refresh tokens) and role-based access control.</li>
-                <li>Utilized Drizzle ORM with MySQL to design relational schemas and query profiles, orders, and products.</li>
-                <li>Built an Admin Dashboard supporting database-level user search, filtering, and product inventory controls.</li>
-                <li>Configured custom API middleware with Axios to handle seamless token refresh and CORS requests.</li>
-                <li>Successfully deployed backend services on Render connected to a remote Railway database.</li>
-              </ul>
             </div>
 
-            {/* Project 1 */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
-              <div className="flex justify-between items-start">
-                <h3 className="font-bold text-white text-base">AiPod (Dental Application)</h3>
+            {/* Personal Projects */}
+            <div className="space-y-3">
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Personal Projects</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                {/* Full-Stack E-Commerce Platform */}
+                <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
+                  <div className="flex justify-between items-start">
+                    <h4 className="font-bold text-white text-base">Full-Stack E-Commerce Platform</h4>
+                    <a href="https://e-commerce-maha100104.vercel.app/login" target="_blank" rel="noopener noreferrer" className="text-xs text-[#ffdb70] hover:underline font-semibold flex items-center gap-1">
+                      Live Demo
+                    </a>
+                  </div>
+                  <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                    React, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS
+                  </div>
+                  <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                    <li>Implemented JWT authentication with access/refresh tokens and role-based access control.</li>
+                    <li>Built an admin dashboard with user search, filtering, and product inventory management.</li>
+                    <li>Deployed frontend on Vercel and backend on Render with a Railway-hosted MySQL database; used Axios interceptors for automatic token refresh and CORS handling.</li>
+                  </ul>
+                </div>
+
+                {/* TaskFlow – Todo Application */}
+                <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
+                  <div className="flex justify-between items-start">
+                    <h4 className="font-bold text-white text-base">TaskFlow – Todo Application</h4>
+                    <a href="https://todo-maha100104.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-[#ffdb70] hover:underline font-semibold flex items-center gap-1">
+                      Live Demo
+                    </a>
+                  </div>
+                  <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                    React.js, Vite, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS
+                  </div>
+                  <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                    <li>Built a full-stack todo application with JWT authentication, role-based access control, and profile management.</li>
+                    <li>Implemented RESTful CRUD APIs supporting search, filtering, priorities, categories, due dates, task status, and soft delete.</li>
+                    <li>Developed a responsive dashboard with task analytics, progress tracking, and dark/light mode; deployed on Vercel and Render.</li>
+                  </ul>
+                </div>
+
               </div>
-              <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
-                React.JS, Nest.JS, TypeORM
-              </div>
-              <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
-                <li>Built a dental app allowing patients to securely upload photos and X-rays of their teeth from multiple angles for doctor review.</li>
-                <li>Created a feature that automatically generates initial diagnosis and treatment plans based on uploaded images, saving doctor and patient time.</li>
-              </ul>
             </div>
 
-            {/* Project 2 */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
-              <div className="flex justify-between items-start">
-                <h3 className="font-bold text-white text-base">Leo Muthu Scholarship (LMS)</h3>
-              </div>
-              <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
-                React Native, Nest.JS, Drizzle ORM
-              </div>
-              <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
-                <li>Developed a full-stack scholarship portal where students apply online and staff verify details before releasing funds.</li>
-                <li>Built secure login systems with Aadhaar and mobile OTPs, giving students a personal dashboard to track applications.</li>
-              </ul>
-            </div>
+            {/* Professional / Client Projects */}
+            <div className="space-y-3">
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Professional / Client Projects</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            {/* Project 3 */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
-              <div className="flex justify-between items-start">
-                <h3 className="font-bold text-white text-base">Aram Foundation Donation App</h3>
-              </div>
-              <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
-                React Native, Nest.JS, Drizzle ORM
-              </div>
-              <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
-                <li>Created a secure, user-friendly donation platform that makes it easy for users to contribute funds to the foundation online.</li>
-                <li>Built a custom admin dashboard that lets foundation staff easily hide, show, or manage specific input fields on the app without writing code.</li>
-              </ul>
-            </div>
+                {/* AiPod – Dental Application */}
+                <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
+                  <div className="flex justify-between items-start">
+                    <h4 className="font-bold text-white text-base">AiPod – Dental Application</h4>
+                  </div>
+                  <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                    React.js, NestJS, TypeORM
+                  </div>
+                  <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                    <li>Built a dental application enabling patients to securely upload photos and X-rays for doctor review.</li>
+                    <li>Developed a feature to auto-generate initial diagnosis and treatment plans from uploaded images, reducing review time for patients and doctors.</li>
+                  </ul>
+                </div>
 
-            {/* Project 4 */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
-              <div className="flex justify-between items-start">
-                <h3 className="font-bold text-white text-base">IQAC Event Scheduling System</h3>
+                {/* Aram Foundation Donation App */}
+                <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
+                  <div className="flex justify-between items-start">
+                    <h4 className="font-bold text-white text-base">Aram Foundation Donation App</h4>
+                  </div>
+                  <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                    React.js, NestJS, Drizzle ORM
+                  </div>
+                  <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                    <li>Built a secure, user-friendly donation platform for online contributions to the foundation.</li>
+                    <li>Created a custom admin dashboard allowing staff to manage form fields without writing code.</li>
+                  </ul>
+                </div>
+
+                {/* IQAC Event Scheduling System */}
+                <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 md:col-span-2">
+                  <div className="flex justify-between items-start">
+                    <h4 className="font-bold text-white text-base">IQAC Event Scheduling System</h4>
+                  </div>
+                  <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                    React.js, Vite, NestJS, Drizzle ORM
+                  </div>
+                  <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                    <li>Designed a centralized college event scheduling platform with automated student/staff notifications.</li>
+                    <li>Wrote custom backend logic to detect and prevent scheduling conflicts across exams and events.</li>
+                  </ul>
+                </div>
+
               </div>
-              <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
-                React, Vite, Nest.JS, Drizzle ORM
-              </div>
-              <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
-                <li>Designed a centralized college management platform to easily schedule exams and notify students/staff of events.</li>
-                <li>Wrote custom backend logic to automatically prevent scheduling conflicts, ensuring that exams and college events never overlap.</li>
-              </ul>
             </div>
 
           </div>
@@ -551,10 +417,10 @@ export default function ResumePage() {
           <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] flex flex-col sm:flex-row justify-between sm:items-center gap-4">
             <div>
               <h3 className="font-bold text-white text-base">Sri Sairam Engineering College</h3>
-              <p className="text-sm text-gray-400">B.Tech Information Technology</p>
+              <p className="text-sm text-gray-400">B.Tech, Information Technology</p>
             </div>
-            <div className="text-right text-xs sm:text-sm">
-              <span className="text-[#ffdb70] font-semibold block">May 2025</span>
+            <div className="text-left sm:text-right text-xs sm:text-sm">
+              <span className="text-[#ffdb70] font-semibold block">Graduated May 2025</span>
               <span className="text-gray-500 font-medium">CGPA: 8.29 / 10.0</span>
             </div>
           </div>
@@ -568,8 +434,8 @@ export default function ResumePage() {
           </h2>
           <ul className="text-xs sm:text-sm space-y-3 text-gray-400 list-disc ml-4">
             <li>Strategic Excellence Award — Sri Sairam Engineering College</li>
-            <li>Best Project Award (2024) — Institute of Engineers (India), Hosur Local Center</li>
-            <li>Diploma in Computer Application (DCA) — Guru Computers (Scored 89/100)</li>
+            <li>Best Project Award (2024) — Institution of Engineers (India), Hosur Local Centre</li>
+            <li>Diploma in Computer Application (DCA) — Guru Computers (Score: 89/100)</li>
           </ul>
         </section>
 

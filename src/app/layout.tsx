@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Mahalakshmi - Full Stack Developer",
-  description: "Portfolio of Mahalakshmi, a Full Stack Developer specializing in React, React Native, NestJS, and TypeScript",
+  description: "Portfolio of Mahalakshmi, a Full Stack Developer specializing in React.js, NestJS, and TypeScript",
 };
 
 export default function RootLayout({

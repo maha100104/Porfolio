@@ -5,22 +5,25 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ItechLogo from './assests/Itech.jpeg';
 import WorkoholLogo from './assests/workohol.png';
-import MahaAvatar from './assests/maha.jpg';
-import DigitalClockLogo from './assests/Digital Clock.png';
+import MahaAvatar from './assests/maha.png';
 import PupCartLogo from './assests/PupCart.png';
+import DigitalClockLogo from './assests/Digital Clock.png';
 import TravelLogo from './assests/travel.png';
+
 import PortfolioImg from './assests/Portfolio.png';
 import EcommerceImg from './assests/Fullstack E-commerce.png';
 import TodoAppImg from './assests/Todo-App.png';
 interface Project {
   title: string;
-  category: 'Professional Projects' | 'Personal Projects';
+  category: 'Professional Projects' | 'Personal Projects' | 'Beginner Projects';
   description: string;
-  githubUrl: string;
+  liveUrl?: string;
+  codeUrl?: string;
   icon: string;
   bgGradient: string;
   bullets: string[];
   image?: string;
+  date?: string;
 }
 
 const projects: Project[] = [
@@ -30,39 +33,24 @@ const projects: Project[] = [
     title: 'AiPod (Dental Application)',
     category: 'Professional Projects',
     description: 'Built a dental app allowing patients to securely upload photos/X-rays of their teeth for doctor review and automatic diagnosis generation.',
-    githubUrl: '#',
     icon: '🦷',
     bgGradient: 'from-blue-500/20 to-indigo-500/20',
     bullets: [
-      'React • NestJS • TypeORM',
+      'React.js • NestJS • TypeORM',
       '✔ Secure image upload',
       '✔ REST APIs',
       '✔ Patient workflow'
     ]
   },
-  {
-    title: 'Leo Muthu Scholarship (LMS) Portal',
-    category: 'Professional Projects',
-    description: 'Developed a full-stack scholarship portal where students apply online and staff verify details before releasing funds.',
-    githubUrl: '#',
-    icon: '🎓',
-    bgGradient: 'from-amber-500/20 to-orange-500/20',
-    bullets: [
-      'React Native • NestJS • Drizzle ORM',
-      '✔ Multi-step application workflow',
-      '✔ Aadhaar & OTP verification',
-      '✔ Real-time status tracking'
-    ]
-  },
+
   {
     title: 'Aram Foundation Donation App',
     category: 'Professional Projects',
     description: 'Create a secure user-friendly donation platform with a custom admin dashboard for field control without writing code.',
-    githubUrl: '#',
     icon: '🤝',
     bgGradient: 'from-emerald-500/20 to-teal-500/20',
     bullets: [
-      'React Native • NestJS • Drizzle ORM',
+      'React.js • NestJS • Drizzle ORM',
       '✔ Secure payment processing',
       '✔ Dynamic admin dashboard',
       '✔ Real-time fund tracking'
@@ -72,11 +60,10 @@ const projects: Project[] = [
     title: 'IQAC Event Scheduling System',
     category: 'Professional Projects',
     description: 'Centralized exam/event scheduling system with automated conflict-prevention algorithms.',
-    githubUrl: '#',
     icon: '📅',
     bgGradient: 'from-purple-500/20 to-pink-500/20',
     bullets: [
-      'React • Vite • NestJS • Drizzle ORM',
+      'React.js • Vite • NestJS • Drizzle ORM',
       '✔ Conflict-prevention algorithms',
       '✔ Centralized exam scheduling',
       '✔ Automated notifications'
@@ -86,11 +73,12 @@ const projects: Project[] = [
     title: 'TaskFlow – Modern Full-Stack Todo & Productivity Dashboard',
     category: 'Personal Projects',
     description: 'A modern full-stack productivity application featuring secure authentication, task management, category filters, analytics, and dark/light themes.',
-    githubUrl: 'https://todo-maha100104.vercel.app/',
+    liveUrl: 'https://todo-maha100104.vercel.app/',
+    codeUrl: 'https://github.com/maha100104',
     icon: '✅',
     bgGradient: 'from-blue-500/20 to-cyan-500/20',
     bullets: [
-      'React • Vite • TypeScript • NestJS • Drizzle ORM • MySQL',
+      'React.js • Vite • TypeScript • NestJS • Drizzle ORM • MySQL',
       '✔ Features JWT authentication, task CRUD with soft delete, and priority/category management',
       '✔ Integrated task analytics, progress tracking, search/filtering, and dark/light themes',
       '✔ Deployed frontend on Vercel, backend on Render, and MySQL on Railway'
@@ -100,12 +88,13 @@ const projects: Project[] = [
   {
     title: 'Full-Stack E-Commerce Platform',
     category: 'Personal Projects',
-    description: 'Full-Stack E-Commerce Platform built with React, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS.',
-    githubUrl: 'https://e-commerce-maha100104.vercel.app/login',
+    description: 'Full-Stack E-Commerce Platform built with React.js, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS.',
+    liveUrl: 'https://e-commerce-maha100104.vercel.app/login',
+    codeUrl: 'https://github.com/maha100104',
     icon: '🛍️',
     bgGradient: 'from-teal-500/20 to-cyan-500/20',
     bullets: [
-      'React • TypeScript • NestJS • Drizzle ORM • MySQL • JWT • Tailwind CSS',
+      'React.js • TypeScript • NestJS • Drizzle ORM • MySQL • JWT • Tailwind CSS',
       '✔ Implemented JWT authentication with access/refresh tokens and role‑based access control',
       '✔ Built an Admin Dashboard with user search, filtering, and product inventory management',
       '✔ Deployed frontend on Vercel, backend on Render, MySQL on Railway, using Axios interceptors for token refresh and CORS handling'
@@ -116,11 +105,12 @@ const projects: Project[] = [
     title: 'Modern Developer Portfolio',
     category: 'Personal Projects',
     description: 'A highly interactive developer portfolio built to showcase personal projects, professional experience, and technical skills.',
-    githubUrl: 'https://portfolio-maha100104.vercel.app/',
+    liveUrl: 'https://portfolio-maha100104.vercel.app/',
+    codeUrl: 'https://github.com/maha100104',
     icon: '✨',
     bgGradient: 'from-pink-500/20 to-rose-400/20',
     bullets: [
-      'Next.js • React • Tailwind CSS • TypeScript',
+      'Next.js • React.js • Tailwind CSS • TypeScript',
       '✔ Sleek, modern UI with smooth animations',
       '✔ Fully responsive & interactive design'
     ],
@@ -129,12 +119,13 @@ const projects: Project[] = [
   {
     title: 'PupCart — Pet E-commerce Website',
     category: 'Personal Projects',
-    description: 'A fully functional e-commerce website for pet products built with HTML, CSS and JavaScript.',
-    githubUrl: 'https://pup-cart-e-commerce-website-maha100104.vercel.app/',
+    description: 'A fully functional pet e-commerce platform with product listings, shopping cart, and responsive design.',
+    liveUrl: 'https://pup-cart-e-commerce-website-maha100104.vercel.app/',
+    codeUrl: 'https://github.com/maha100104/PupCart-E-CommerceWebsite',
     icon: '🐾',
     bgGradient: 'from-orange-400/20 to-yellow-400/20',
     bullets: [
-      'HTML • CSS • React.js • Next.js • Firebase',
+      'React.js • Next.js • Firebase',
       '✔ Complete product listing & cart system',
       '✔ Seamless responsive mobile design'
     ],
@@ -142,9 +133,10 @@ const projects: Project[] = [
   },
   {
     title: 'Travel Website',
-    category: 'Personal Projects',
+    category: 'Beginner Projects',
     description: 'A visually rich travel destination website showcasing destinations with modern UI and smooth interactions.',
-    githubUrl: 'https://travel-website-maha100104.vercel.app/',
+    liveUrl: 'https://travel-website-maha100104.vercel.app/',
+    codeUrl: 'https://github.com/maha100104/TravelWebsite',
     icon: '✈️',
     bgGradient: 'from-sky-500/20 to-cyan-400/20',
     bullets: [
@@ -152,13 +144,15 @@ const projects: Project[] = [
       '✔ Elegant scroll interactions',
       '✔ Rich modern visual hierarchy'
     ],
-    image: TravelLogo.src
+    image: TravelLogo.src,
+    date: 'Jan 2024'
   },
   {
     title: 'Digital Clock',
-    category: 'Personal Projects',
+    category: 'Beginner Projects',
     description: 'A stylish real-time digital clock application with live time display built using JavaScript.',
-    githubUrl: 'https://digital-clock-maha100104.vercel.app/',
+    liveUrl: 'https://digital-clock-maha100104.vercel.app/',
+    codeUrl: 'https://github.com/maha100104/DigitalClock',
     icon: '🕐',
     bgGradient: 'from-violet-500/20 to-fuchsia-500/20',
     bullets: [
@@ -166,9 +160,11 @@ const projects: Project[] = [
       '✔ Real-time Date API integration',
       '✔ Smooth dark theme digit transitions'
     ],
-    image: DigitalClockLogo.src
+    image: DigitalClockLogo.src,
+    date: 'Dec 2023'
   },
 ];
+
 
 
 export default function Home() {
@@ -189,7 +185,7 @@ export default function Home() {
     ? projects
     : projects.filter(p => p.category === selectedCategory);
 
-  const categories = ['All', 'Professional Projects', 'Personal Projects'];
+  const categories = ['All', 'Professional Projects', 'Personal Projects', 'Beginner Projects'];
 
   return (
     <main className="min-h-screen py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex items-center justify-center animate-fade-in">
@@ -314,7 +310,9 @@ export default function Home() {
             </a>
             {/* LinkedIn */}
             <a
-              href="#"
+              href="https://linkedin.com/in/maha100104"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-[#ffdb70] transition-colors"
               aria-label="LinkedIn Profile"
             >
@@ -521,18 +519,7 @@ export default function Home() {
                     <div className="w-10 h-[5px] bg-[#ffdb70] rounded-full"></div>
                   </div>
 
-                  {/* Link to Printable resume page */}
-                  <Link
-                    href="/MahalakshmiP_Resume.pdf?v=2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-[#ffdb70] hover:underline font-semibold bg-[#2b2b2c] border border-[#383838] px-3.5 py-2 rounded-xl transition-all cursor-pointer flex items-center gap-1.5"
-                  >
-                    View Resume
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                    </svg>
-                  </Link>
+
                 </div>
 
                 <div className="space-y-8">
@@ -562,10 +549,10 @@ export default function Home() {
                               <span className="text-gray-200 flex items-center gap-1.5">
                                 <span>🟨</span> JavaScript
                               </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
                             </div>
                             <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
                             </div>
                           </div>
                           <div className="space-y-1.5">
@@ -573,10 +560,10 @@ export default function Home() {
                               <span className="text-gray-200 flex items-center gap-1.5">
                                 <span>🟦</span> TypeScript
                               </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
                             </div>
                             <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
                             </div>
                           </div>
                         </div>
@@ -664,7 +651,7 @@ export default function Home() {
 
                       {/* Databases Group */}
                       <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Database</h4>
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Database & ORM</h4>
                         <div className="space-y-3.5">
                           <div className="space-y-1.5">
                             <div className="flex justify-between items-center text-xs font-semibold">
@@ -821,13 +808,18 @@ export default function Home() {
 
                         <div className="mt-3 space-y-4">
                           <p className="text-sm text-gray-400 leading-relaxed">
-                            Engineered a highly responsive, real-time e-commerce platform with customizable themes to optimize the user checkout funnel.
+                            Engineered PupCart — a highly responsive, real-time pet e-commerce platform with React.js, Next.js, Firebase, and customizable themes to optimize the user checkout funnel.
                           </p>
 
                           <div className="flex flex-wrap gap-2">
-                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Built Pet E-commerce</span>
-                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Firebase Integration</span>
+                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Built PupCart Pet E-commerce</span>
+                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> React.js • Next.js • Firebase</span>
+                            <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Product Listing & Cart System</span>
                           </div>
+                          <a href="https://pup-cart-e-commerce-website-maha100104.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-[#ffdb70] font-semibold hover:underline mt-1">
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+                            View PupCart Live Demo
+                          </a>
                         </div>
                       </div>
 
@@ -901,30 +893,10 @@ export default function Home() {
                 {/* Projects Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                   {filteredProjects.map((project, idx) => (
-                    <a
+                    <div
                       key={idx}
-                      href={project.githubUrl}
-                      target={project.githubUrl !== '#' ? "_blank" : undefined}
-                      rel="noopener noreferrer"
-                      onClick={(e) => {
-                        if (project.githubUrl === '#') {
-                          e.preventDefault();
-                        }
-                      }}
-                      className={`group relative rounded-2xl bg-[#2b2b2c] border border-[#383838] overflow-hidden hover:border-[#ffdb70] transition-all duration-300 shadow-md flex flex-col min-h-[260px] ${project.githubUrl === '#' ? 'cursor-default' : 'cursor-pointer'}`}
+                      className="group relative rounded-2xl bg-[#2b2b2c] border border-[#383838] overflow-hidden hover:border-[#ffdb70] transition-all duration-300 shadow-md flex flex-col min-h-[260px]"
                     >
-                      {/* Tooltip on hover - only show for cards with a real URL */}
-                      {project.githubUrl !== '#' && (
-                        <div className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-3 pb-3">
-                          <div className="bg-[#0e0e10]/90 backdrop-blur-sm border border-[#383838] rounded-xl px-3 py-2 flex items-center gap-2">
-                            <svg className="w-3 h-3 text-[#ffdb70] shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                            </svg>
-                            <span className="text-[10px] text-[#ffdb70] font-medium truncate">{project.githubUrl}</span>
-                          </div>
-                        </div>
-                      )}
-
                       <div className="h-24 shadow-inner relative overflow-hidden shrink-0">
                         {/* Fallback layout: Gradient and Emoji */}
                         <div className={`absolute inset-0 bg-gradient-to-r ${project.bgGradient} flex items-center justify-center text-4xl`}>
@@ -956,11 +928,42 @@ export default function Home() {
                             ))}
                           </ul>
                         </div>
-                        <div className="flex items-center justify-between text-[10px] text-gray-500 uppercase tracking-widest font-semibold pt-4 mt-4 border-t border-[#383838]">
-                          <span>{project.category}</span>
+                        <div className="flex items-center justify-between pt-4 mt-4 border-t border-[#383838]">
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">{project.category}</span>
+                            {project.date && (
+                              <span className="text-[10px] text-gray-500 font-medium">• {project.date}</span>
+                            )}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            {project.liveUrl && (
+                              <a
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#ffdb70]/10 border border-[#ffdb70]/30 text-[#ffdb70] text-[10px] font-semibold hover:bg-[#ffdb70]/20 hover:border-[#ffdb70]/50 transition-all duration-200"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+                                Live Demo
+                              </a>
+                            )}
+                            {project.codeUrl && (
+                              <a
+                                href={project.codeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#383838]/50 border border-[#383838] text-gray-300 text-[10px] font-semibold hover:bg-[#383838] hover:text-white transition-all duration-200"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                Code
+                              </a>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   ))}
                 </div>
 
