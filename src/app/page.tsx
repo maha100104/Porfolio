@@ -19,6 +19,7 @@ interface Project {
   description: string;
   liveUrl?: string;
   codeUrl?: string;
+  demoVideoUrl?: string;
   icon: string;
   bgGradient: string;
   bullets: string[];
@@ -27,109 +28,108 @@ interface Project {
 }
 
 const projects: Project[] = [
-
-
   {
-    title: 'AiPod (Dental Application)',
+    title: 'AiPod – Dental Application',
     category: 'Professional Projects',
-    description: 'Built a dental app allowing patients to securely upload photos/X-rays of their teeth for doctor review and automatic diagnosis generation.',
+    description: 'Built a dental application enabling patients to securely upload photos and X-rays for doctor review and auto-generate initial diagnosis and treatment plans.',
     icon: '🦷',
     bgGradient: 'from-blue-500/20 to-indigo-500/20',
     bullets: [
       'React.js • NestJS • TypeORM',
-      '✔ Secure image upload',
-      '✔ REST APIs',
-      '✔ Patient workflow'
+      '✔ Built a dental application enabling patients to securely upload photos & X-rays for doctor review',
+      '✔ Developed auto-generation of initial diagnosis and treatment plans from uploaded images',
+      '✔ Reduced review time for patients and doctors'
     ]
   },
-
   {
     title: 'Aram Foundation Donation App',
     category: 'Professional Projects',
-    description: 'Create a secure user-friendly donation platform with a custom admin dashboard for field control without writing code.',
+    description: 'Built a secure, user-friendly donation platform for online contributions with a custom admin dashboard for staff field management.',
     icon: '🤝',
     bgGradient: 'from-emerald-500/20 to-teal-500/20',
     bullets: [
       'React.js • NestJS • Drizzle ORM',
-      '✔ Secure payment processing',
-      '✔ Dynamic admin dashboard',
-      '✔ Real-time fund tracking'
+      '✔ Built a secure, user-friendly donation platform for online contributions',
+      '✔ Created a custom admin dashboard allowing staff to manage form fields without writing code'
     ]
   },
   {
     title: 'IQAC Event Scheduling System',
     category: 'Professional Projects',
-    description: 'Centralized exam/event scheduling system with automated conflict-prevention algorithms.',
+    description: 'Designed a centralized college event scheduling platform with automated student/staff notifications and conflict detection logic.',
     icon: '📅',
     bgGradient: 'from-purple-500/20 to-pink-500/20',
     bullets: [
       'React.js • Vite • NestJS • Drizzle ORM',
-      '✔ Conflict-prevention algorithms',
-      '✔ Centralized exam scheduling',
-      '✔ Automated notifications'
+      '✔ Designed a centralized college event scheduling platform with automated notifications',
+      '✔ Wrote custom backend logic to detect and prevent scheduling conflicts across exams and events'
     ]
   },
   {
-    title: 'TaskFlow – Modern Full-Stack Todo & Productivity Dashboard',
+    title: 'Full-Stack E-Commerce Platform',
     category: 'Personal Projects',
-    description: 'A modern full-stack productivity application featuring secure authentication, task management, category filters, analytics, and dark/light themes.',
+    description: 'Full-stack e-commerce platform with 10+ REST APIs, JWT access/refresh auth, RBAC, admin dashboard, containerized with Docker and deployed on AWS ECS Fargate.',
+    liveUrl: 'https://e-commerce-maha100104.vercel.app/login',
+    codeUrl: 'https://github.com/maha100104',
+    demoVideoUrl: 'https://jumpshare.com/s/qBqxcaxUb786jBZklM32',
+    icon: '🛍️',
+    bgGradient: 'from-teal-500/20 to-cyan-500/20',
+    bullets: [
+      'React.js • Vite • TypeScript • NestJS • Drizzle ORM • MySQL • JWT • Tailwind CSS • Docker • AWS (ECS Fargate, ECR, RDS) • GitHub Actions',
+      '✔ Built full-stack e-commerce platform with 10+ REST APIs for product search/filtering, cart, wishlist, orders, reviews, payment simulation, JWT auth (access/refresh), RBAC & admin dashboard',
+      '✔ Containerized frontend & backend with Docker; deployed on AWS ECS Fargate (ECR, Application Load Balancers, RDS MySQL)',
+      '✔ Automated builds/deployments with GitHub Actions CI/CD via AWS OIDC; secured setup with VPC, security groups, IAM roles & Systems Manager Parameter Store'
+    ],
+    image: EcommerceImg.src,
+    date: 'May 2026 – Sep 2026'
+  },
+  {
+    title: 'TaskFlow – Todo Application',
+    category: 'Personal Projects',
+    description: 'Full-stack task management app with JWT auth, RBAC, profile management, task analytics dashboard, and 10+ REST CRUD APIs.',
     liveUrl: 'https://todo-maha100104.vercel.app/',
     codeUrl: 'https://github.com/maha100104',
     icon: '✅',
     bgGradient: 'from-blue-500/20 to-cyan-500/20',
     bullets: [
-      'React.js • Vite • TypeScript • NestJS • Drizzle ORM • MySQL',
-      '✔ Features JWT authentication, task CRUD with soft delete, and priority/category management',
-      '✔ Integrated task analytics, progress tracking, search/filtering, and dark/light themes',
-      '✔ Deployed frontend on Vercel, backend on Render, and MySQL on Railway'
+      'React.js • Vite • TypeScript • NestJS • Drizzle ORM • MySQL • JWT • Tailwind CSS',
+      '✔ Full-stack task management with JWT auth, RBAC, profile management, priorities, search, filtering, soft delete',
+      '✔ Delivered 10+ REST CRUD APIs and a responsive dashboard with task analytics',
+      '✔ Deployed via CI/CD to Vercel, Render, and TiDB Cloud'
     ],
-    image: TodoAppImg.src
+    image: TodoAppImg.src,
+    date: 'Jun 2026 – Jul 2026'
   },
   {
-    title: 'Full-Stack E-Commerce Platform',
+    title: 'PupCart – Pet E-Commerce Website',
     category: 'Personal Projects',
-    description: 'Full-Stack E-Commerce Platform built with React.js, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS.',
-    liveUrl: 'https://e-commerce-maha100104.vercel.app/login',
-    codeUrl: 'https://github.com/maha100104',
-    icon: '🛍️',
-    bgGradient: 'from-teal-500/20 to-cyan-500/20',
-    bullets: [
-      'React.js • TypeScript • NestJS • Drizzle ORM • MySQL • JWT • Tailwind CSS',
-      '✔ Implemented JWT authentication with access/refresh tokens and role‑based access control',
-      '✔ Built an Admin Dashboard with user search, filtering, and product inventory management',
-      '✔ Deployed frontend on Vercel, backend on Render, MySQL on Railway, using Axios interceptors for token refresh and CORS handling'
-    ],
-    image: EcommerceImg.src
-  },
-  {
-    title: 'Modern Developer Portfolio',
-    category: 'Personal Projects',
-    description: 'A highly interactive developer portfolio built to showcase personal projects, professional experience, and technical skills.',
-    liveUrl: 'https://portfolio-maha100104.vercel.app/',
-    codeUrl: 'https://github.com/maha100104',
-    icon: '✨',
-    bgGradient: 'from-pink-500/20 to-rose-400/20',
-    bullets: [
-      'Next.js • React.js • Tailwind CSS • TypeScript',
-      '✔ Sleek, modern UI with smooth animations',
-      '✔ Fully responsive & interactive design'
-    ],
-    image: PortfolioImg.src
-  },
-  {
-    title: 'PupCart — Pet E-commerce Website',
-    category: 'Personal Projects',
-    description: 'A fully functional pet e-commerce platform with product listings, shopping cart, and responsive design.',
+    description: 'Built a pet e-commerce site with 30+ product listings and full cart functionality using reusable React/Next.js components and Firebase backend.',
     liveUrl: 'https://pup-cart-e-commerce-website-maha100104.vercel.app/',
     codeUrl: 'https://github.com/maha100104/PupCart-E-CommerceWebsite',
     icon: '🐾',
     bgGradient: 'from-orange-400/20 to-yellow-400/20',
     bullets: [
       'React.js • Next.js • Firebase',
-      '✔ Complete product listing & cart system',
-      '✔ Seamless responsive mobile design'
+      '✔ Built pet e-commerce site with 30+ product listings and full cart functionality',
+      '✔ Structured Firebase as backend for product & cart data, enabling real-time updates across desktop, tablet, and mobile without page reload'
     ],
-    image: PupCartLogo.src
+    image: PupCartLogo.src,
+    date: 'Apr 2025 – Jun 2025'
+  },
+  {
+    title: 'Modern Developer Portfolio',
+    category: 'Personal Projects',
+    description: 'Interactive developer portfolio built to showcase personal projects, professional experience, and technical skills.',
+    liveUrl: 'https://portfolio-maha100104.vercel.app/',
+    codeUrl: 'https://github.com/maha100104',
+    icon: '✨',
+    bgGradient: 'from-pink-500/20 to-rose-400/20',
+    bullets: [
+      'Next.js • React.js • Tailwind CSS • TypeScript',
+      '✔ Modern responsive UI with clean navigation and interactive resume view',
+      '✔ Showcases production apps, cloud deployment experience, and technical stack'
+    ],
+    image: PortfolioImg.src
   },
   {
     title: 'Travel Website',
@@ -140,7 +140,7 @@ const projects: Project[] = [
     icon: '✈️',
     bgGradient: 'from-sky-500/20 to-cyan-400/20',
     bullets: [
-      'HTML • CSS',
+      'HTML5 • CSS3',
       '✔ Elegant scroll interactions',
       '✔ Rich modern visual hierarchy'
     ],
@@ -156,13 +156,13 @@ const projects: Project[] = [
     icon: '🕐',
     bgGradient: 'from-violet-500/20 to-fuchsia-500/20',
     bullets: [
-      'HTML • CSS • JavaScript',
+      'HTML5 • CSS3 • JavaScript',
       '✔ Real-time Date API integration',
       '✔ Smooth dark theme digit transitions'
     ],
     image: DigitalClockLogo.src,
     date: 'Dec 2023'
-  },
+  }
 ];
 
 
@@ -374,7 +374,7 @@ export default function Home() {
 
                 <div className="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
                   <p>
-                    Hi, I'm <strong>Mahalakshmi</strong>, an <strong>Associate Software Developer</strong> with over <strong>1 year of experience</strong> building scalable full-stack web applications. I specialize in the <strong>TypeScript ecosystem</strong>, working with <strong>React.js, NestJS, Java, MySQL, and modern web technologies</strong> to deliver secure and high-performance applications.
+                    Hi, I'm <strong>Mahalakshmi P</strong>, a <strong>Full-Stack Developer & Software Engineer</strong> with <strong>1+ year of experience</strong> building and shipping production applications using <strong>React.js, Next.js, NestJS, and TypeScript</strong>. Implemented JWT/OAuth authentication and RBAC across 3 identity providers and delivered 10+ REST APIs. Hands-on with <strong>Docker, AWS (ECS Fargate, RDS), and GitHub Actions CI/CD</strong> for containerized deployments. Optimized MySQL databases, reducing query response times by up to 70% in production systems.
                   </p>
 
                   <div>
@@ -382,23 +382,23 @@ export default function Home() {
                     <ul className="space-y-2.5">
                       <li className="flex items-start gap-2.5">
                         <span className="text-base shrink-0 mt-0.5">💻</span>
-                        <span>Build end-to-end full-stack web applications using React.js, NestJS, and TypeScript.</span>
+                        <span>Build end-to-end full-stack web applications using React.js, Next.js, NestJS, and TypeScript.</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-base shrink-0 mt-0.5">🔐</span>
-                        <span>Develop secure REST APIs with JWT authentication and role-based access control.</span>
+                        <span>Develop secure REST APIs with JWT/OAuth authentication (Google, Microsoft, DigiLocker) and RBAC.</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="text-base shrink-0 mt-0.5">🗄️</span>
-                        <span>Design and integrate scalable database solutions using Drizzle ORM, MySQL, and SQL Server.</span>
+                        <span className="text-base shrink-0 mt-0.5">🐳</span>
+                        <span>Containerize applications using Docker and automate deployments via GitHub Actions CI/CD to AWS ECS Fargate, Vercel, and Render.</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-base shrink-0 mt-0.5">☁️</span>
-                        <span>Deploy production-ready applications on modern cloud platforms.</span>
+                        <span>Architect cloud infrastructure using AWS (ECS Fargate, ECR, RDS MySQL, Application Load Balancers, VPC, IAM, Parameter Store).</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="text-base shrink-0 mt-0.5">🚀</span>
-                        <span>Create responsive, user-friendly interfaces with clean, maintainable code.</span>
+                        <span className="text-base shrink-0 mt-0.5">🗄️</span>
+                        <span>Design and optimize MySQL and SQL Server database schemas using Drizzle ORM and TypeORM.</span>
                       </li>
                     </ul>
                   </div>
@@ -406,12 +406,12 @@ export default function Home() {
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-3">Experience</h3>
                     <p>
-                      I've worked on projects across <strong>e-commerce, healthcare, education, productivity, and donation management</strong>, building features such as authentication systems, admin dashboards, real-time task management, and secure third-party integrations including <strong>Google, Microsoft, and Aadhaar (DigiLocker)</strong> authentication.
+                      I've built 3+ production applications across <strong>e-commerce, healthcare, education, productivity, and donation management</strong>, engineering features such as OAuth authentication, role-based access control, admin dashboards, real-time cart functionality, and containerized AWS cloud deployments.
                     </p>
                   </div>
 
                   <p>
-                    I'm passionate about solving real-world problems through technology and continuously improving my skills. My goal is to build software that is <strong>secure, scalable, and intuitive</strong>, delivering meaningful experiences for users.
+                    I'm passionate about solving complex real-world problems through clean code, containerization, and cloud automation. My goal is to build software that is <strong>secure, scalable, and intuitive</strong>.
                   </p>
                 </div>
 
@@ -524,239 +524,219 @@ export default function Home() {
 
                 <div className="space-y-8">
 
-                  {/* Software Skills Groups */}
+                  {/* Technical Skills Groups */}
                   <div className="space-y-6">
-                    <h3 className="text-lg font-bold text-white">Software Skills</h3>
+                    <h3 className="text-lg font-bold text-white">Technical Skills</h3>
+
+                    {/* Legend */}
+                    <div className="flex items-center gap-6 text-[10px] text-gray-400 font-semibold uppercase tracking-wider">
+                      <span className="flex items-center gap-1.5">
+                        <span className="w-8 h-1.5 rounded-full bg-[#383838] inline-block overflow-hidden"><span className="block w-1/3 h-full rounded-full bg-[#ffdb70]"></span></span>
+                        Beginner
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <span className="w-8 h-1.5 rounded-full bg-[#383838] inline-block overflow-hidden"><span className="block w-2/3 h-full rounded-full bg-[#ffdb70]"></span></span>
+                        Intermediate
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <span className="w-8 h-1.5 rounded-full bg-[#ffdb70] inline-block"></span>
+                        Advanced
+                      </span>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                      {/* Programming Languages Group */}
-                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Programming Languages</h4>
-                        <div className="space-y-3.5">
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>☕</span> Java
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                      {/* Languages Group */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Languages</h4>
+                        {[
+                          { name: 'Java (Core Java, OOP)', level: 'intermediate' },
+                          { name: 'JavaScript', level: 'advanced' },
+                          { name: 'TypeScript', level: 'intermediate' },
+                          { name: 'SQL', level: 'intermediate' },
+                          { name: 'HTML5', level: 'advanced' },
+                          { name: 'CSS3', level: 'advanced' },
+                        ].map(({ name, level }) => (
+                          <div key={name} className="space-y-1">
+                            <div className="flex justify-between items-center">
+                              <span className="text-xs text-gray-200">{name}</span>
+                              <span className="text-[10px] text-gray-500 capitalize">{level}</span>
                             </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
-                            </div>
-                          </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🟨</span> JavaScript
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
+                            <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden">
+                              <div className={`h-full rounded-full bg-[#ffdb70] transition-all duration-500 ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
                             </div>
                           </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🟦</span> TypeScript
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
-                            </div>
-                          </div>
-                        </div>
+                        ))}
                       </div>
 
                       {/* Frontend Group */}
-                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Frontend</h4>
-                        <div className="space-y-3.5">
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>⚛️</span> React.js
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Frontend</h4>
+                        {[
+                          { name: 'React.js', level: 'advanced' },
+                          { name: 'Next.js', level: 'intermediate' },
+                          { name: 'Vite', level: 'intermediate' },
+                          { name: 'Tailwind CSS', level: 'advanced' },
+                          { name: 'Radix UI', level: 'intermediate' },
+                          { name: 'Responsive Web Design', level: 'advanced' },
+                        ].map(({ name, level }) => (
+                          <div key={name} className="space-y-1">
+                            <div className="flex justify-between items-center">
+                              <span className="text-xs text-gray-200">{name}</span>
+                              <span className="text-[10px] text-gray-500 capitalize">{level}</span>
                             </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
-                            </div>
-                          </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>▲</span> Next.js
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                            <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden">
+                              <div className={`h-full rounded-full bg-[#ffdb70] transition-all duration-500 ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
                             </div>
                           </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🌊</span> Tailwind CSS
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
-                            </div>
-                          </div>
-                        </div>
+                        ))}
                       </div>
 
                       {/* Backend Group */}
-                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Backend</h4>
-                        <div className="space-y-3.5">
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🟩</span> NestJS
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Backend</h4>
+                        {[
+                          { name: 'NestJS', level: 'advanced' },
+                          { name: 'RESTful APIs', level: 'advanced' },
+                          { name: 'JWT Authentication', level: 'advanced' },
+                          { name: 'OAuth', level: 'intermediate' },
+                          { name: 'Role-Based Access Control (RBAC)', level: 'advanced' },
+                        ].map(({ name, level }) => (
+                          <div key={name} className="space-y-1">
+                            <div className="flex justify-between items-center">
+                              <span className="text-xs text-gray-200">{name}</span>
+                              <span className="text-[10px] text-gray-500 capitalize">{level}</span>
                             </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
-                            </div>
-                          </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🟢</span> Node.js
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
+                            <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden">
+                              <div className={`h-full rounded-full bg-[#ffdb70] transition-all duration-500 ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
                             </div>
                           </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🔗</span> REST API
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider">Advanced</span>
+                        ))}
+                      </div>
+
+                      {/* Databases & ORM Group */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Databases & ORM</h4>
+                        {[
+                          { name: 'MySQL', level: 'advanced' },
+                          { name: 'SQL Server', level: 'intermediate' },
+                          { name: 'Drizzle ORM', level: 'advanced' },
+                          { name: 'TypeORM', level: 'intermediate' },
+                          { name: 'Firebase', level: 'intermediate' },
+                        ].map(({ name, level }) => (
+                          <div key={name} className="space-y-1">
+                            <div className="flex justify-between items-center">
+                              <span className="text-xs text-gray-200">{name}</span>
+                              <span className="text-[10px] text-gray-500 capitalize">{level}</span>
                             </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '95%' }}></div>
+                            <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden">
+                              <div className={`h-full rounded-full bg-[#ffdb70] transition-all duration-500 ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
                             </div>
                           </div>
+                        ))}
+                      </div>
+
+                      {/* Tools & Platforms Group */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300 md:col-span-2">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Tools & Platforms</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                          {[
+                            { name: 'Git', level: 'advanced' },
+                            { name: 'GitHub', level: 'advanced' },
+                            { name: 'Swagger', level: 'intermediate' },
+                            { name: 'Postman', level: 'advanced' },
+                          ].map(({ name, level }) => (
+                            <div key={name} className="space-y-1">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-gray-200">{name}</span>
+                                <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                              </div>
+                              <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden">
+                                <div className={`h-full rounded-full bg-[#ffdb70] transition-all duration-500 ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                              </div>
+                            </div>
+                          ))}
                         </div>
                       </div>
 
-                      {/* Databases Group */}
-                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Database & ORM</h4>
-                        <div className="space-y-3.5">
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🐬</span> MySQL
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                      {/* Cloud & Deployment Group */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300 md:col-span-2">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Cloud & Deployment</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                          {[
+                            { name: 'Docker', level: 'mid' },
+                            { name: 'CI/CD (GitHub Actions)', level: 'mid' },
+                            { name: 'AWS (ECS Fargate, ECR, RDS, ALB, VPC, IAM)', level: 'mid' },
+                            { name: 'Vercel', level: 'advanced' },
+                            { name: 'Render', level: 'intermediate' },
+                            { name: 'Railway', level: 'beginner' },
+                            { name: 'TiDB Cloud', level: 'beginner' },
+                            { name: 'Linux', level: 'intermediate' },
+                          ].map(({ name, level }) => (
+                            <div key={name} className="space-y-1">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-gray-200">{name}</span>
+                                <span className="text-[10px] text-gray-500 capitalize">{level === 'mid' ? 'intermediate' : level}</span>
+                              </div>
+                              <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden">
+                                <div className={`h-full rounded-full bg-[#ffdb70] transition-all duration-500 ${level === 'beginner' ? 'w-1/3' : level === 'mid' ? 'w-1/2' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
-                            </div>
-                          </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🛢️</span> SQL Server
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
-                            </div>
-                          </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>💧</span> TypeORM / Drizzle ORM
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       </div>
 
-                      {/* Database Tools Group */}
-                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Database Tools</h4>
-                        <div className="space-y-3.5">
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🛠️</span> Beekeeper Studio
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                      {/* Process & Methodology Group */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300 md:col-span-2">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Process & Methodology</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                          {[
+                            { name: 'SDLC', level: 'intermediate' },
+                            { name: 'Manual & API Testing (Postman)', level: 'intermediate' },
+                            { name: 'SIT', level: 'intermediate' },
+                            { name: 'UAT', level: 'intermediate' },
+                            { name: 'Bug Tracking', level: 'intermediate' },
+                          ].map(({ name, level }) => (
+                            <div key={name} className="space-y-1">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-gray-200">{name}</span>
+                                <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                              </div>
+                              <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden">
+                                <div className={`h-full rounded-full bg-[#ffdb70] transition-all duration-500 ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
-                            </div>
-                          </div>
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🐘</span> pgAdmin
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
-                            </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       </div>
 
-                      {/* Version Control Group */}
-                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Version Control</h4>
-                        <div className="space-y-3.5">
-                          <div className="space-y-1.5">
-                            <div className="flex justify-between items-center text-xs font-semibold">
-                              <span className="text-gray-200 flex items-center gap-1.5">
-                                <span>🌿</span> Git & GitHub
-                              </span>
-                              <span className="text-[#ffdb70] text-[10px] font-bold uppercase tracking-wider text-opacity-80">Intermediate</span>
+                      {/* Soft Skills Group */}
+                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300 md:col-span-2">
+                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Soft Skills</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                          {[
+                            { name: 'Problem Solving', level: 'advanced' },
+                            { name: 'Team Collaboration', level: 'advanced' },
+                            { name: 'Communication', level: 'advanced' },
+                            { name: 'Time Management', level: 'advanced' },
+                            { name: 'Adaptability', level: 'advanced' },
+                          ].map(({ name, level }) => (
+                            <div key={name} className="space-y-1">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-gray-200">{name}</span>
+                                <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                              </div>
+                              <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden">
+                                <div className={`h-full rounded-full bg-[#ffdb70] transition-all duration-500 ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-[#383838] rounded-full overflow-hidden">
-                              <div className="h-full bg-gradient-to-r from-[#ffdb70] to-[#e5a93b] rounded-full" style={{ width: '75%' }}></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Deployment & Cloud Group */}
-                      <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm hover:border-[#ffdb70]/20 transition-all duration-300 md:col-span-2">
-                        <h4 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Deployment & Cloud</h4>
-                        <div className="space-y-3 text-gray-200 text-xs font-semibold">
-                          <div className="flex items-center gap-2">
-                            <span>▲</span> Vercel <span className="text-gray-400 font-normal">(Frontend Deployment)</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span>🚀</span> Render <span className="text-gray-400 font-normal">(Backend Deployment)</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span>🚂</span> Railway <span className="text-gray-400 font-normal">(Database Hosting)</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span>☁️</span> TiDB Cloud <span className="text-gray-400 font-normal">(Managed MySQL-Compatible Database)</span>
-                          </div>
+                          ))}
                         </div>
                       </div>
 
                     </div>
                   </div>
+
 
                   {/* Experience Timeline */}
                   <div className="space-y-6">
@@ -928,24 +908,33 @@ export default function Home() {
                             ))}
                           </ul>
                         </div>
-                        <div className="flex items-center justify-between pt-4 mt-4 border-t border-[#383838]">
-                          <div className="flex items-center gap-2">
-                            <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">{project.category}</span>
-                            {project.date && (
-                              <span className="text-[10px] text-gray-500 font-medium">• {project.date}</span>
-                            )}
-                          </div>
-                          <div className="flex items-center gap-2">
+                        <div className="flex flex-col gap-2 pt-4 mt-4 border-t border-[#383838]">
+                          {project.date && (
+                            <span className="text-[11px] text-[#ffdb70] font-medium">{project.date}</span>
+                          )}
+                          <div className="flex items-center gap-1.5 flex-wrap">
                             {project.liveUrl && (
                               <a
                                 href={project.liveUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#ffdb70]/10 border border-[#ffdb70]/30 text-[#ffdb70] text-[10px] font-semibold hover:bg-[#ffdb70]/20 hover:border-[#ffdb70]/50 transition-all duration-200"
+                                className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#ffdb70]/10 border border-[#ffdb70]/30 text-[#ffdb70] text-[10px] font-semibold hover:bg-[#ffdb70]/20 hover:border-[#ffdb70]/50 transition-all duration-200 whitespace-nowrap"
                                 onClick={(e) => e.stopPropagation()}
                               >
                                 <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
                                 Live Demo
+                              </a>
+                            )}
+                            {project.demoVideoUrl && (
+                              <a
+                                href={project.demoVideoUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-purple-500/10 border border-purple-500/30 text-purple-300 text-[10px] font-semibold hover:bg-purple-500/20 hover:border-purple-500/50 transition-all duration-200 whitespace-nowrap"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg>
+                                Demo Video
                               </a>
                             )}
                             {project.codeUrl && (
@@ -953,10 +942,10 @@ export default function Home() {
                                 href={project.codeUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#383838]/50 border border-[#383838] text-gray-300 text-[10px] font-semibold hover:bg-[#383838] hover:text-white transition-all duration-200"
+                                className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#383838]/50 border border-[#383838] text-gray-300 text-[10px] font-semibold hover:bg-[#383838] hover:text-white transition-all duration-200 whitespace-nowrap"
                                 onClick={(e) => e.stopPropagation()}
                               >
-                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
                                 Code
                               </a>
                             )}

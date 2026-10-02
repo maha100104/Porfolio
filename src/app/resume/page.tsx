@@ -120,7 +120,7 @@ export default function ResumePage() {
           </h2>
           <div className="space-y-4 text-sm sm:text-base leading-relaxed text-gray-300">
             <p>
-              Full-Stack Software Developer with 1+ year of professional experience building and deploying scalable web applications using <strong>React.js, Next.js, NestJS, TypeScript, and Java</strong>. Skilled in designing secure RESTful APIs, JWT-based authentication, relational database design (MySQL, SQL Server), and responsive UI development with Tailwind CSS. Experienced across the full software development lifecycle, from requirements to deployment on Vercel, Railway and Render. Strong track record of delivering production-ready applications.
+              Full-Stack Developer with 1+ year of experience building and shipping 3+ production applications using React.js, Next.js, NestJS, and TypeScript. Implemented JWT/OAuth authentication and RBAC across 3 identity providers and delivered 10+ REST APIs. Hands-on with Docker, AWS (ECS Fargate, RDS), and GitHub Actions CI/CD for containerized deployments. Optimized MySQL databases, reducing query response times by up to 70% in production systems.
             </p>
           </div>
         </section>
@@ -131,90 +131,207 @@ export default function ResumePage() {
             <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
             Technical Skills
           </h2>
+
+          {/* Legend */}
+          <div className="flex items-center gap-6 text-[10px] text-gray-400 font-semibold uppercase tracking-wider pb-1">
+            <span className="flex items-center gap-1.5"><span className="w-8 h-1.5 rounded-full bg-[#383838] inline-block"><span className="block w-1/3 h-full rounded-full bg-[#ffdb70]"></span></span> Beginner</span>
+            <span className="flex items-center gap-1.5"><span className="w-8 h-1.5 rounded-full bg-[#383838] inline-block relative"><span className="block w-2/3 h-full rounded-full bg-[#ffdb70]"></span></span> Intermediate</span>
+            <span className="flex items-center gap-1.5"><span className="w-8 h-1.5 rounded-full bg-[#ffdb70] inline-block"></span> Advanced</span>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
+
             {/* Languages Group */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Languages</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Java</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">JavaScript</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">TypeScript</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">SQL</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">HTML5</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">CSS3</span>
-              </div>
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm print-skill-bg">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Languages</h3>
+              {[
+                { name: 'Java (Core Java, OOP)', level: 'intermediate' },
+                { name: 'JavaScript', level: 'advanced' },
+                { name: 'TypeScript', level: 'intermediate' },
+                { name: 'SQL', level: 'intermediate' },
+                { name: 'HTML5', level: 'advanced' },
+                { name: 'CSS3', level: 'advanced' },
+              ].map(({ name, level }) => (
+                <div key={name} className="space-y-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs text-gray-200">{name}</span>
+                    <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden print-skill-bar">
+                    <div className={`h-full rounded-full bg-[#ffdb70] ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Frontend Group */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Frontend</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">React.js</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Next.js</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Vite</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Tailwind CSS</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Radix UI</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Responsive Web Design</span>
-              </div>
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm print-skill-bg">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Frontend</h3>
+              {[
+                { name: 'React.js', level: 'advanced' },
+                { name: 'Next.js', level: 'intermediate' },
+                { name: 'Vite', level: 'intermediate' },
+                { name: 'Tailwind CSS', level: 'advanced' },
+                { name: 'Radix UI', level: 'intermediate' },
+                { name: 'Responsive Web Design', level: 'advanced' },
+              ].map(({ name, level }) => (
+                <div key={name} className="space-y-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs text-gray-200">{name}</span>
+                    <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden print-skill-bar">
+                    <div className={`h-full rounded-full bg-[#ffdb70] ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Backend Group */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Backend</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Node.js</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">NestJS</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">REST API Design</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">JWT Authentication</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Role-Based Access Control</span>
-              </div>
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm print-skill-bg">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Backend</h3>
+              {[
+                { name: 'NestJS', level: 'advanced' },
+                { name: 'RESTful APIs', level: 'advanced' },
+                { name: 'JWT Authentication', level: 'advanced' },
+                { name: 'OAuth', level: 'intermediate' },
+                { name: 'Role-Based Access Control (RBAC)', level: 'advanced' },
+              ].map(({ name, level }) => (
+                <div key={name} className="space-y-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs text-gray-200">{name}</span>
+                    <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden print-skill-bar">
+                    <div className={`h-full rounded-full bg-[#ffdb70] ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Databases & ORM Group */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Databases & ORM</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">MySQL</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">SQL Server</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Drizzle ORM</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">TypeORM</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Firebase</span>
-              </div>
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm print-skill-bg">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Databases & ORM</h3>
+              {[
+                { name: 'MySQL', level: 'advanced' },
+                { name: 'SQL Server', level: 'intermediate' },
+                { name: 'Drizzle ORM', level: 'advanced' },
+                { name: 'TypeORM', level: 'intermediate' },
+                { name: 'Firebase', level: 'intermediate' },
+              ].map(({ name, level }) => (
+                <div key={name} className="space-y-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs text-gray-200">{name}</span>
+                    <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden print-skill-bar">
+                    <div className={`h-full rounded-full bg-[#ffdb70] ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Tools & Platforms Group */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg md:col-span-2">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Tools & Platforms</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Git</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">GitHub</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Vercel</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Render</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Railway</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Linux</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Postman</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">pnpm</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Cursor</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Beekeeper Studio</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">pgAdmin</span>
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm print-skill-bg md:col-span-2">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Tools & Platforms</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                {[
+                  { name: 'Git', level: 'advanced' },
+                  { name: 'GitHub', level: 'advanced' },
+                  { name: 'Swagger', level: 'intermediate' },
+                  { name: 'Postman', level: 'advanced' },
+                ].map(({ name, level }) => (
+                  <div key={name} className="space-y-1">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-gray-200">{name}</span>
+                      <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                    </div>
+                    <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden print-skill-bar">
+                      <div className={`h-full rounded-full bg-[#ffdb70] ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Cloud & Deployment Group */}
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm print-skill-bg md:col-span-2">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Cloud & Deployment</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                {[
+                  { name: 'Docker', level: 'mid' },
+                  { name: 'CI/CD (GitHub Actions)', level: 'mid' },
+                  { name: 'AWS (ECS Fargate, ECR, RDS, ALB, VPC, IAM)', level: 'mid' },
+                  { name: 'Vercel', level: 'advanced' },
+                  { name: 'Render', level: 'intermediate' },
+                  { name: 'Railway', level: 'beginner' },
+                  { name: 'TiDB Cloud', level: 'beginner' },
+                  { name: 'Linux', level: 'intermediate' },
+                ].map(({ name, level }) => (
+                  <div key={name} className="space-y-1">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-gray-200">{name}</span>
+                      <span className="text-[10px] text-gray-500 capitalize">{level === 'mid' ? 'intermediate' : level}</span>
+                    </div>
+                    <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden print-skill-bar">
+                      <div className={`h-full rounded-full bg-[#ffdb70] ${level === 'beginner' ? 'w-1/3' : level === 'mid' ? 'w-1/2' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Process & Methodology Group */}
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm print-skill-bg md:col-span-2">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Process & Methodology</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                {[
+                  { name: 'SDLC', level: 'intermediate' },
+                  { name: 'Manual & API Testing (Postman)', level: 'intermediate' },
+                  { name: 'SIT', level: 'intermediate' },
+                  { name: 'UAT', level: 'intermediate' },
+                  { name: 'Bug Tracking', level: 'intermediate' },
+                ].map(({ name, level }) => (
+                  <div key={name} className="space-y-1">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-gray-200">{name}</span>
+                      <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                    </div>
+                    <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden print-skill-bar">
+                      <div className={`h-full rounded-full bg-[#ffdb70] ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Soft Skills Group */}
-            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-4 shadow-sm print-skill-bg md:col-span-2">
-              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider">Soft Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Problem Solving</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Team Collaboration</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Communication</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Time Management</span>
-                <span className="bg-[#1e1e1f] px-3 py-1 rounded-lg text-xs text-gray-200">Adaptability</span>
+            <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3 shadow-sm print-skill-bg md:col-span-2">
+              <h3 className="font-bold text-[#ffdb70] text-xs uppercase tracking-wider mb-3">Soft Skills</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                {[
+                  { name: 'Problem Solving', level: 'advanced' },
+                  { name: 'Team Collaboration', level: 'advanced' },
+                  { name: 'Communication', level: 'advanced' },
+                  { name: 'Time Management', level: 'advanced' },
+                  { name: 'Adaptability', level: 'advanced' },
+                ].map(({ name, level }) => (
+                  <div key={name} className="space-y-1">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-gray-200">{name}</span>
+                      <span className="text-[10px] text-gray-500 capitalize">{level}</span>
+                    </div>
+                    <div className="w-full h-1.5 bg-[#383838] rounded-full overflow-hidden print-skill-bar">
+                      <div className={`h-full rounded-full bg-[#ffdb70] ${level === 'beginner' ? 'w-1/3' : level === 'intermediate' ? 'w-2/3' : 'w-full'}`}></div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
           </div>
         </section>
+
 
         {/* Work Experience */}
         <section className="space-y-6">
@@ -245,9 +362,10 @@ export default function ResumePage() {
               
               <div className="mt-3 space-y-2 ml-11 text-xs sm:text-sm text-gray-400">
                 <ul className="list-disc ml-4 space-y-2 leading-relaxed">
-                  <li>Developed and maintained 3+ full-stack web applications using React.js, NestJS, and TypeScript, delivering scalable frontend and backend solutions.</li>
-                  <li>Integrated Google and Microsoft OAuth authentication along with Aadhaar verification via DigiLocker, enabling secure and seamless user onboarding.</li>
-                  <li>Collaborated with cross-functional teams to design, optimize, and maintain relational databases using Linux-based development tools.</li>
+                  <li>Shipped 3+ production full-stack applications by building React.js/NestJS/TypeScript services and deploying them through Git-based CI/CD pipelines (Vercel/Render auto-deploy on push), enabling faster, repeatable releases.</li>
+                  <li>Secured user onboarding across 3 authentication providers (Google OAuth, Microsoft OAuth, DigiLocker) by implementing JWT-based authentication and role-based access control (RBAC) on RESTful APIs.</li>
+                  <li>Caught and resolved 20+ bugs through manual testing of features and API endpoints before formal SIT/UAT cycles, reducing post-release defects.</li>
+                  <li>Optimized MySQL database schema and queries, reducing average query response time by 70% across 3 production applications.</li>
                 </ul>
               </div>
             </div>
@@ -272,8 +390,9 @@ export default function ResumePage() {
               
               <div className="mt-3 space-y-2 ml-11 text-xs sm:text-sm text-gray-400">
                 <ul className="list-disc ml-4 space-y-2 leading-relaxed">
-                  <li>Developed a real-time Pet Accessories e-commerce platform using React.js, JavaScript, HTML, CSS, and Firebase, delivering a responsive and interactive shopping experience.</li>
-                  <li>Designed and implemented responsive, customizable user interfaces, improving usability across devices and providing a seamless shopping experience.</li>
+                  <li>Built a real-time e-commerce application featuring 30+ products by developing shopping cart functionality and a responsive UI in React.js, improving usability across the customer journey.</li>
+                  <li>Increased frontend development speed and consistency by building reusable React components and responsive layouts across desktop, tablet, and mobile.</li>
+                  <li>Developed the e-commerce frontend using Next.js, implementing structured and reusable page components for product-related functionality.</li>
                 </ul>
               </div>
             </div>
@@ -289,71 +408,6 @@ export default function ResumePage() {
           </h2>
 
           <div className="space-y-6">
-
-            {/* Internship Project */}
-            <div className="space-y-3">
-              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Internship Project</h3>
-              <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
-                <div className="flex justify-between items-start">
-                  <h4 className="font-bold text-white text-base">PupCart – Pet E-Commerce Website</h4>
-                  <a href="https://pup-cart-e-commerce-website-maha100104.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-[#ffdb70] hover:underline font-semibold flex items-center gap-1">
-                    Live Demo
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-                  </a>
-                </div>
-                <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
-                  React.js, Next.js, Firebase
-                </div>
-                <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
-                  <li>Built a fully functional pet e-commerce website with product listings, product details, shopping cart functionality, and a responsive user interface.</li>
-                  <li>Developed using React.js, Next.js, and Firebase, delivering a fast, scalable, and mobile-friendly shopping experience.</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Personal Projects */}
-            <div className="space-y-3">
-              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Personal Projects</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                {/* Full-Stack E-Commerce Platform */}
-                <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
-                  <div className="flex justify-between items-start">
-                    <h4 className="font-bold text-white text-base">Full-Stack E-Commerce Platform</h4>
-                    <a href="https://e-commerce-maha100104.vercel.app/login" target="_blank" rel="noopener noreferrer" className="text-xs text-[#ffdb70] hover:underline font-semibold flex items-center gap-1">
-                      Live Demo
-                    </a>
-                  </div>
-                  <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
-                    React, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS
-                  </div>
-                  <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
-                    <li>Implemented JWT authentication with access/refresh tokens and role-based access control.</li>
-                    <li>Built an admin dashboard with user search, filtering, and product inventory management.</li>
-                    <li>Deployed frontend on Vercel and backend on Render with a Railway-hosted MySQL database; used Axios interceptors for automatic token refresh and CORS handling.</li>
-                  </ul>
-                </div>
-
-                {/* TaskFlow – Todo Application */}
-                <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
-                  <div className="flex justify-between items-start">
-                    <h4 className="font-bold text-white text-base">TaskFlow – Todo Application</h4>
-                    <a href="https://todo-maha100104.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-[#ffdb70] hover:underline font-semibold flex items-center gap-1">
-                      Live Demo
-                    </a>
-                  </div>
-                  <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
-                    React.js, Vite, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS
-                  </div>
-                  <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
-                    <li>Built a full-stack todo application with JWT authentication, role-based access control, and profile management.</li>
-                    <li>Implemented RESTful CRUD APIs supporting search, filtering, priorities, categories, due dates, task status, and soft delete.</li>
-                    <li>Developed a responsive dashboard with task analytics, progress tracking, and dark/light mode; deployed on Vercel and Render.</li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
 
             {/* Professional / Client Projects */}
             <div className="space-y-3">
@@ -405,6 +459,95 @@ export default function ResumePage() {
               </div>
             </div>
 
+            {/* Internship Project */}
+            <div className="space-y-3">
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Internship Project</h3>
+              <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h4 className="font-bold text-white text-base">PupCart – Pet E-Commerce Website</h4>
+                    <span className="text-[11px] text-[#ffdb70]">Apr 2025 – Jun 2025</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <a href="https://pup-cart-e-commerce-website-maha100104.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-[#ffdb70] hover:underline font-semibold flex items-center gap-1">
+                      Live Demo
+                    </a>
+                    <a href="https://github.com/maha100104/PupCart-E-CommerceWebsite" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:text-white underline">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+                <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest">
+                  React.js, Next.js, Firebase
+                </div>
+                <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                  <li>Built a pet e-commerce site with 30+ product listings and full cart functionality by developing reusable React/Next.js components, delivering a fast, mobile-friendly shopping experience.</li>
+                  <li>Structured Firebase as the backend for product and cart data, enabling real-time updates across desktop, tablet, and mobile without a page reload.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Self-Initiated Projects */}
+            <div className="space-y-3">
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Self-Initiated Projects</h3>
+              <div className="space-y-6">
+                
+                {/* Full-Stack E-Commerce Platform */}
+                <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
+                  <div className="flex flex-col gap-2">
+                    <div>
+                      <h4 className="font-bold text-white text-base">Full-Stack E-Commerce Platform</h4>
+                      <span className="text-[11px] text-[#ffdb70]">May 2026 – Sep 2026</span>
+                    </div>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <a href="https://e-commerce-maha100104.vercel.app/login" target="_blank" rel="noopener noreferrer" className="text-xs text-[#ffdb70] hover:underline font-semibold flex items-center gap-1">
+                        Live Demo
+                      </a>
+                      <a href="https://github.com/maha100104" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:text-white underline">
+                        GitHub
+                      </a>
+                      <a href="https://jumpshare.com/s/qBqxcaxUb786jBZklM32" target="_blank" rel="noopener noreferrer" className="text-xs text-purple-400 hover:text-purple-300 font-semibold underline flex items-center gap-1">
+                        Demo Video
+                      </a>
+                    </div>
+                  </div>
+                  <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest leading-relaxed">
+                    React.js, Vite, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS, Docker, AWS (ECS Fargate, ECR, RDS), GitHub Actions
+                  </div>
+                  <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                    <li>Built a full-stack e-commerce platform using React, TypeScript, NestJS, and Drizzle ORM with MySQL, delivering 10+ REST APIs for product search/filtering, cart, wishlist, orders, reviews, and payment simulation, secured with JWT access/refresh authentication, RBAC, and an admin dashboard.</li>
+                    <li>Containerized the frontend and backend with Docker and deployed them on AWS ECS Fargate (ECR, Application Load Balancers, RDS MySQL), automating builds and deployments with GitHub Actions CI/CD via AWS OIDC, and securing the setup with VPC, security groups, IAM roles, and Systems Manager Parameter Store.</li>
+                  </ul>
+                </div>
+
+                {/* TaskFlow – Todo Application */}
+                <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
+                  <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-2">
+                    <div>
+                      <h4 className="font-bold text-white text-base">TaskFlow – Todo Application</h4>
+                      <span className="text-[11px] text-[#ffdb70]">Jun 2026 – Jul 2026</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <a href="https://todo-maha100104.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-[#ffdb70] hover:underline font-semibold flex items-center gap-1">
+                        Live Demo
+                      </a>
+                      <a href="https://github.com/maha100104" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:text-white underline">
+                        GitHub
+                      </a>
+                    </div>
+                  </div>
+                  <div className="text-[10px] text-[#ffdb70] font-semibold uppercase tracking-widest leading-relaxed">
+                    React.js, Vite, TypeScript, NestJS, Drizzle ORM, MySQL, JWT, Tailwind CSS
+                  </div>
+                  <ul className="text-xs text-gray-400 list-disc ml-4 space-y-2 leading-relaxed">
+                    <li>Built a full-stack task management app with JWT auth, RBAC, and profile management, supporting search, filtering, priorities, and soft delete.</li>
+                    <li>Delivered 10+ REST CRUD APIs and a responsive dashboard with task analytics, deployed via CI/CD to Vercel/Render/TiDB Cloud.</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -426,16 +569,15 @@ export default function ResumePage() {
           </div>
         </section>
 
-        {/* Awards and Certifications */}
+        {/* Awards */}
         <section className="space-y-4">
           <h2 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-3">
             <span className="w-1.5 h-6 bg-[#ffdb70] rounded-full"></span>
-            Awards & Certifications
+            Awards
           </h2>
           <ul className="text-xs sm:text-sm space-y-3 text-gray-400 list-disc ml-4">
             <li>Strategic Excellence Award — Sri Sairam Engineering College</li>
             <li>Best Project Award (2024) — Institution of Engineers (India), Hosur Local Centre</li>
-            <li>Diploma in Computer Application (DCA) — Guru Computers (Score: 89/100)</li>
           </ul>
         </section>
 
