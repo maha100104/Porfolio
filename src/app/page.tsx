@@ -69,8 +69,8 @@ const projects: Project[] = [
     title: 'Full-Stack E-Commerce Platform',
     category: 'Personal Projects',
     description: 'Full-stack e-commerce platform with 10+ REST APIs, JWT access/refresh auth, RBAC, admin dashboard, containerized with Docker and deployed on AWS ECS Fargate.',
-    liveUrl: 'https://e-commerce-maha100104.vercel.app/login',
-    codeUrl: 'https://github.com/maha100104',
+    liveUrl: 'http://ecommerce-frontend-alb-396617150.ap-south-1.elb.amazonaws.com/login',
+    codeUrl: 'https://github.com/maha100104/E-Commerce',
     demoVideoUrl: 'https://jumpshare.com/s/qBqxcaxUb786jBZklM32',
     icon: '🛍️',
     bgGradient: 'from-teal-500/20 to-cyan-500/20',
@@ -88,7 +88,7 @@ const projects: Project[] = [
     category: 'Personal Projects',
     description: 'Full-stack task management app with JWT auth, RBAC, profile management, task analytics dashboard, and 10+ REST CRUD APIs.',
     liveUrl: 'https://todo-maha100104.vercel.app/',
-    codeUrl: 'https://github.com/maha100104',
+    codeUrl: 'https://github.com/maha100104/Todo',
     icon: '✅',
     bgGradient: 'from-blue-500/20 to-cyan-500/20',
     bullets: [
@@ -121,7 +121,7 @@ const projects: Project[] = [
     category: 'Personal Projects',
     description: 'Interactive developer portfolio built to showcase personal projects, professional experience, and technical skills.',
     liveUrl: 'https://portfolio-maha100104.vercel.app/',
-    codeUrl: 'https://github.com/maha100104',
+    codeUrl: 'https://github.com/maha100104/Porfolio',
     icon: '✨',
     bgGradient: 'from-pink-500/20 to-rose-400/20',
     bullets: [
