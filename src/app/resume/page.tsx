@@ -120,7 +120,7 @@ export default function ResumePage() {
           </h2>
           <div className="space-y-4 text-sm sm:text-base leading-relaxed text-gray-300">
             <p>
-              Full-Stack Developer with 1+ year of experience building and shipping 3+ production applications using React.js, Next.js, NestJS, and TypeScript. Implemented JWT/OAuth authentication and RBAC across 3 identity providers and delivered 10+ REST APIs. Hands-on with Docker, AWS (ECS Fargate, RDS), and GitHub Actions CI/CD for containerized deployments. Optimized MySQL databases, reducing query response times by up to 70% in production systems.
+              Full-Stack Developer with 2 year of experience building and shipping 3+ production applications using React.js, Next.js, NestJS, and TypeScript. Implemented JWT/OAuth authentication and RBAC across 3 identity providers and delivered 10+ REST APIs. Hands-on with Docker, AWS (ECS Fargate, RDS), and GitHub Actions CI/CD for containerized deployments. Optimized MySQL databases, reducing query response times by up to 70% in production systems.
             </p>
           </div>
         </section>
@@ -345,7 +345,7 @@ export default function ResumePage() {
             {/* Experience Item 1 */}
             <div className="relative">
               <div className="absolute -left-[31px] top-1.5 w-2.5 h-2.5 bg-[#444] border-2 border-[#1e1e1f] rounded-full ring-4 ring-[#ffdb70]"></div>
-              
+
               <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-1 mb-2">
                 <div className="flex items-center gap-3">
                   <img src={ItechLogo.src} alt="Itech India Logo" className="w-8 h-8 rounded bg-white object-contain" />
@@ -355,11 +355,11 @@ export default function ResumePage() {
                   Aug 2025 – Present
                 </span>
               </div>
-              
+
               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3 ml-11">
                 Itech India Private Limited
               </h4>
-              
+
               <div className="mt-3 space-y-2 ml-11 text-xs sm:text-sm text-gray-400">
                 <ul className="list-disc ml-4 space-y-2 leading-relaxed">
                   <li>Shipped 3+ production full-stack applications by building React.js/NestJS/TypeScript services and deploying them through Git-based CI/CD pipelines (Vercel/Render auto-deploy on push), enabling faster, repeatable releases.</li>
@@ -373,7 +373,7 @@ export default function ResumePage() {
             {/* Experience Item 2 */}
             <div className="relative mt-8">
               <div className="absolute -left-[31px] top-1.5 w-2.5 h-2.5 bg-[#444] border-2 border-[#1e1e1f] rounded-full ring-4 ring-[#ffdb70]/50"></div>
-              
+
               <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-1 mb-2">
                 <div className="flex items-center gap-3">
                   <img src={WorkoholLogo.src} alt="Workohol Logo" className="w-8 h-8 rounded bg-white object-contain" />
@@ -383,11 +383,11 @@ export default function ResumePage() {
                   Apr 2025 – Jul 2025
                 </span>
               </div>
-              
+
               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3 ml-11">
                 Workcohol
               </h4>
-              
+
               <div className="mt-3 space-y-2 ml-11 text-xs sm:text-sm text-gray-400">
                 <ul className="list-disc ml-4 space-y-2 leading-relaxed">
                   <li>Built a real-time e-commerce application featuring 30+ products by developing shopping cart functionality and a responsive UI in React.js, improving usability across the customer journey.</li>
@@ -491,7 +491,7 @@ export default function ResumePage() {
             <div className="space-y-3">
               <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Self-Initiated Projects</h3>
               <div className="space-y-6">
-                
+
                 {/* Full-Stack E-Commerce Platform */}
                 <div className="p-5 rounded-2xl bg-[#2b2b2c] border border-[#383838] space-y-3">
                   <div className="flex flex-col gap-2">

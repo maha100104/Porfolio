@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import ItechLogo from './assests/Itech.jpeg';
 import WorkoholLogo from './assests/workohol.png';
@@ -114,7 +113,7 @@ const projects: Project[] = [
       '✔ Structured Firebase as backend for product & cart data, enabling real-time updates across desktop, tablet, and mobile without page reload'
     ],
     image: PupCartLogo.src,
-    date: 'Apr 2025 – Jun 2025'
+    date: 'Feb 2025 – Jun 2025'
   },
   {
     title: 'Modern Developer Portfolio',
@@ -374,7 +373,7 @@ export default function Home() {
 
                 <div className="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
                   <p>
-                    Hi, I'm <strong>Mahalakshmi P</strong>, a <strong>Full-Stack Developer & Software Engineer</strong> with <strong>1+ year of experience</strong> building and shipping production applications using <strong>React.js, Next.js, NestJS, and TypeScript</strong>. Implemented JWT/OAuth authentication and RBAC across 3 identity providers and delivered 10+ REST APIs. Hands-on with <strong>Docker, AWS (ECS Fargate, RDS), and GitHub Actions CI/CD</strong> for containerized deployments. Optimized MySQL databases, reducing query response times by up to 70% in production systems.
+                    Hi, I'm <strong>Mahalakshmi P</strong>, a <strong>Full-Stack Developer & Software Engineer</strong> with <strong>2+ year of experience</strong> building and shipping production applications using <strong>React.js, Next.js, NestJS, and TypeScript</strong>. Implemented JWT/OAuth authentication and RBAC across three identity providers and delivered 30+ REST APIs. Hands-on with <strong>Docker, AWS (ECS Fargate, RDS), and GitHub Actions CI/CD</strong> for containerized deployments. Optimized MySQL databases, reducing query response times by up to 70% in production systems.
                   </p>
 
                   <div>
@@ -418,7 +417,7 @@ export default function Home() {
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
                   <div className="p-4 rounded-2xl bg-gradient-to-br from-[#2b2b2c] to-[#1e1e1f] border border-[#383838] text-center shadow-md hover:border-[#ffdb70]/30 transition-all duration-300">
-                    <span className="block text-2xl sm:text-3xl font-extrabold text-[#ffdb70]">1+</span>
+                    <span className="block text-2xl sm:text-3xl font-extrabold text-[#ffdb70]">2+</span>
                     <span className="block text-[10px] text-gray-400 mt-1 uppercase tracking-wider font-semibold">Years Experience</span>
                   </div>
                   <div className="p-4 rounded-2xl bg-gradient-to-br from-[#2b2b2c] to-[#1e1e1f] border border-[#383838] text-center shadow-md hover:border-[#ffdb70]/30 transition-all duration-300">
@@ -782,7 +781,7 @@ export default function Home() {
                           <Image src={WorkoholLogo} alt="Workohol Logo" className="w-9 h-9 rounded bg-white object-contain" />
                           <div>
                             <h4 className="text-base font-bold text-white">Full-Stack Developer Intern</h4>
-                            <span className="text-xs text-[#ffdb70] font-medium block">April 2025 — July 2025 | Workcohol</span>
+                            <span className="text-xs text-[#ffdb70] font-medium block">Feb 2025 — July 2025 | Workcohol</span>
                           </div>
                         </div>
 
@@ -796,10 +795,7 @@ export default function Home() {
                             <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> React.js • Next.js • Firebase</span>
                             <span className="inline-flex items-center gap-1.5 bg-[#2b2b2c] border border-[#383838] px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-300 shadow-sm"><span className="text-[14px]">✅</span> Product Listing & Cart System</span>
                           </div>
-                          <a href="https://pup-cart-e-commerce-website-maha100104.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-[#ffdb70] font-semibold hover:underline mt-1">
-                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-                            View PupCart Live Demo
-                          </a>
+
                         </div>
                       </div>
 
